@@ -41,18 +41,67 @@ CNAME           managed by GitHub, do not edit by hand
 - [ ] **Ship the receipt logic.** The site now promises, in three places, that existing
       $0.99 purchasers are unlocked to the full version for free. That promise is only good
       if the entitlement check actually ships with the free-tier release.
-- [ ] **Screenshots.** The landing page has three empty slots (`.shots` section in
-      `index.html`). Need two iPhone portrait captures and one Mac window capture. The
-      section is currently three portrait boxes — rebuild it around the real aspect ratios
-      once the images exist, since a Mac window is landscape.
-- [ ] **Update App Store Connect URLs** — Privacy Policy, Support, and Marketing. The
-      listing's privacy URL still points at a GitHub repo path that returns 404.
+- [ ] **Upload the screenshots.** All three sets are built and sitting in
+      `screenshots-appstore/`; nothing has been uploaded to App Store Connect yet.
+      iPhone 6.9" is empty on the listing and 6.5" still holds 9 old shots (some are
+      camera-roll `IMG_99xx.jpeg` files) — delete those once 6.9" is filled, since Apple
+      scales the largest size down for every smaller device. iPad 13" holds 3 old shots to
+      replace. The Mac slot is locked until the next macOS version.
+- [ ] **Swap `02-dashboard.png` once the count string is fixed.** The dashboard reads
+      "Totals limited to 7 of 3 vehicles" in the iPhone and iPad shots. Shipped as-is by
+      choice on Sept 5, 2026.
+- [ ] **macOS Support and Marketing URLs.** Still `http://aeronauticaltrax.com` and empty.
+      The macOS version 2026.5.21 is Ready for Distribution, so its metadata is locked —
+      only Promotional Text is editable. Set these on the next macOS version.
 - [ ] **Review the legal pages.** `privacy.html` and `terms.html` are drafts written to match
       what the App Store listing already claims (no data collected, iCloud-only storage).
       Confirm that stays true once in-app purchase receipt checking ships.
 - [ ] **Universal links** — add `.well-known/apple-app-site-association`. Needs the Apple
       Team ID and the bundle identifier.
 - [ ] **Cancel the GoDaddy Website Builder subscription.** It serves nothing now.
+
+---
+
+### Screenshots — done Sept 5, 2026
+
+All three platforms recaptured in **light** appearance, same eight screens in the same
+order everywhere: vehicles, dashboard, fuel logs, service, parts, checklists, travel logs,
+trip report.
+
+| Set | Size | Location |
+|---|---|---|
+| iPhone | 1320x2868 portrait | `screenshots-appstore/iphone/` |
+| iPad | 2752x2064 landscape | `screenshots-appstore/ipad/` |
+| Mac | 2880x1800 (16:10) | `screenshots-appstore/mac/` |
+
+All RGB with the alpha channel stripped — Apple rejects PNGs carrying transparency.
+Raw captures live in `screenshots-raw/`; that folder and `screenshots-appstore/` are both
+gitignored, so only the three web images in `assets/shots/` are tracked.
+
+What was learned doing it, so it does not have to be learned again:
+
+- **Simulator status bar.** `xcrun simctl status_bar booted override --time "9:41" ...`
+  on ONE line — a line-continuation paste silently no-ops. `booted` fails when several
+  simulators are running, so `xcrun simctl shutdown all` first. iPad takes no cellular
+  flags.
+- **Capture straight to the folder:** `xcrun simctl io booted screenshot <path>` for
+  simulators, `screencapture -o -w <path>` on the Mac (`-o` drops the window shadow, which
+  is what would otherwise introduce transparency).
+- **Mac resolution depends on the display.** The external 1080p monitor is 1x and yields
+  only 1920x1050, which caps out at Apple's 1440x900. The MacBook's built-in Retina screen
+  yields 3420x2146, which downscales cleanly to 2880x1800. Always shoot Mac shots on the
+  laptop's own screen.
+- **A Mac window capture is never 16:10** — it gets centered on a 16:10 canvas padded with
+  the site's `--ground` colour. At 3420x2146 the padding is only 5px a side.
+- **Verify before shooting the whole set:** dimensions, brightness (light shots measure
+  ~230-245 mean luma; a dark set measures ~37) and eyes on the actual image. Checking only
+  one of those three cost two full recaptures of the Mac set.
+- **Excluded on purpose:** the What's New / release-notes overlay, which exposed the
+  internal build name "FlightTest".
+
+The landing page `.shots` section was rebuilt at the same time — Mac full-width above two
+iPhone shots, each in its own framed container so it reads correctly in both themes.
+Web images are WebP: 640px wide for the phones, 1280px for the Mac.
 
 ---
 
@@ -75,6 +124,11 @@ CNAME           managed by GitHub, do not edit by hand
 - **The pricing section stays published before launch**, with a "Not yet available" notice
   above the tiers making clear $0.99 is what is actually on sale. Remove the notice the day
   the new version ships.
+- **App Store Connect URLs were fixed Sept 5, 2026** (app ID 6751254040). Privacy Policy
+  URL → `https://aeronauticaltrax.com/privacy.html` (was a GitHub repo path returning 404).
+  On the iOS 2026.7.19 version: Support URL → `.../support.html` (was `http://` on the
+  apex), Marketing URL → `https://aeronauticaltrax.com` (was empty). All three are staged,
+  not live — Apple releases metadata changes with the next app version.
 - **Existing $0.99 purchasers get the full version free.** Stated in the FAQ and in
   `terms.html`. Only keep that promise if the receipt logic actually ships.
 
