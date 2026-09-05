@@ -84,15 +84,7 @@ git add -A && git commit -m "Update copy" && git push
 
 GitHub Pages rebuilds within a minute or two.
 
-## Still to do
+## Project status
 
-- [ ] Replace the three screenshot slots on the landing page with real captures
-- [ ] Confirm the support email address (currently `support@aeronauticaltrax.com`)
-- [ ] Confirm the free vs. paid feature split in the pricing section
-- [ ] Update the App Store Connect **Privacy Policy URL** to
-      `https://aeronauticaltrax.com/privacy.html` (the current GitHub URL 404s)
-- [ ] Update the App Store Connect **Support URL** to
-      `https://aeronauticaltrax.com/support.html`
-- [ ] Add `.well-known/apple-app-site-association` for universal links
-      (needs the Team ID and bundle identifier)
-- [ ] Decide whether to publish the free/$19.99 pricing section before launch
+See [STATUS.md](STATUS.md) for current state, open items, decisions already
+made, and the gotchas worth knowing before you edit anything.
