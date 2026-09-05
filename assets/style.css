@@ -125,14 +125,10 @@
   .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
   .brand-mark {
     width: 30px; height: 30px; flex: none;
-    border: 1.5px solid var(--accent);
+    border: 1px solid var(--line);
     border-radius: 7px;
-    display: grid; place-items: center;
-    color: var(--accent);
-    font-family: var(--display);
-    font-weight: 800;
-    font-size: .9rem;
-    letter-spacing: -.03em;
+    display: block;
+    object-fit: cover;
   }
   .brand-name { font-family: var(--display); font-weight: 700; font-size: 1.12rem; letter-spacing: -.02em; }
   .brand-sub {
