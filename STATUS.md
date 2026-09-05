@@ -97,11 +97,38 @@ What was learned doing it, so it does not have to be learned again:
   ~230-245 mean luma; a dark set measures ~37) and eyes on the actual image. Checking only
   one of those three cost two full recaptures of the Mac set.
 - **Excluded on purpose:** the What's New / release-notes overlay, which exposed the
-  internal build name "FlightTest".
+  internal build codename.
 
 The landing page `.shots` section was rebuilt at the same time — Mac full-width above two
 iPhone shots, each in its own framed container so it reads correctly in both themes.
 Web images are WebP: 640px wide for the phones, 1280px for the Mac.
+
+---
+
+### Release notes — how they get published
+
+`whatsnew.html` is GENERATED. Never edit it by hand; the next sync overwrites it.
+
+The app keeps the master copy bundled at
+`Dropbox/xCode/LandShip/LandShip/0 Main/changelog.md`. After shipping a build:
+
+```sh
+cd ~/Sites/aeronauticaltrax.com
+python3 tools/sync-changelog.py     # copies + sanitises + rebuilds
+```
+
+then commit `changelog.md` and `whatsnew.html` together. The script strips the
+`Build: <codename>` marker on the way in and refuses to publish if one survives — this
+repo is public, so anything written into `changelog.md` is readable at
+`aeronauticaltrax.com/changelog.md` and stays in git history. Hiding a value in the
+rendered HTML is NOT the same as it being absent from the file; sanitise on copy.
+Do not name the codename anywhere in this repo, including in comments and notes.
+
+`.nojekyll` is present so GitHub Pages serves `changelog.md` byte-for-byte rather than
+letting Jekyll reinterpret it. That keeps the raw URL stable if the app is ever changed
+to fetch its release notes from the site instead of a bundled copy — the one-copy end
+state. Deferred deliberately (Sept 5, 2026): it adds a network dependency to something
+that currently works fully offline, and VehicleTrax users are often out of signal.
 
 ---
 

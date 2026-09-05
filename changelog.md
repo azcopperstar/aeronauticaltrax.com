@@ -3,7 +3,7 @@ VEHICLETRAX CHANGE LOG
 Send suggestions for features & improvements to: [info@aeronauticaltrax.com](mailto:info@aeronauticaltrax.com)
 
 ----------------------------------
-Version: 2026.09.02 Build: FlightTest
+Version: 2026.09.02
 NOTES
 - This is a major revision with many fixes and new features.  
 - Email us (using the above link or the link on the Resouces tab) with suggestions for improvements, application features or issues with the application.

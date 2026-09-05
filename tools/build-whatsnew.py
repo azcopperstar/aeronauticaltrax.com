@@ -9,7 +9,7 @@ single source for release notes. Re-run this after editing it, then commit both.
 
 Format it expects (blocks separated by a line of dashes):
 
-    Version: 2026.09.02 Build: FlightTest      <- Build is stripped from the site
+    Version: 2026.09.02 Build: <codename>      <- Build is stripped from the site
     NOTES / ADDED / FIXED / CHANGED            <- section keywords, bare on a line
     ## Area                                    <- optional grouping inside a section
     - text before a colon: becomes the bold lead, the rest is detail
