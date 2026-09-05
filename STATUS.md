@@ -118,10 +118,24 @@ Web images are WebP: 640px wide for the phones, 1280px for the Mac.
   app's own maintenance states, not decoration. Light and dark both work off the same
   tokens; never define a color only inside a media query.
 - **It is a TRIAL, not a free tier** (corrected Sept 5, 2026 — an earlier draft had this
-  wrong). The trial is a free download limited to **2 vehicles, 10 records per table, and
-  PDF reports that display on screen but cannot be exported**. It does not expire. The
-  $19.99 one-time purchase removes all three limits. Written this way in the pricing
-  section, two FAQ answers and `terms.html`; keep those in step.
+  wrong). The trial is a free download and does not expire. Exactly three things are
+  restricted, confirmed against the shipping implementation Sept 5, 2026:
+
+  1. **2 vehicles**, and **10 records** in every other capped table (Parts, Fuel Log,
+     Travel Log, Service Records, Service Items, Systems, Vendors, Improvements,
+     Expenditures, Project items, Checklists, Checklist items, Warranties, Scale Tickets,
+     Serial Numbers). Settings is exempt and never capped.
+  2. **PDF export, print and share** — including the Print button in every report, the
+     macOS Cmd-P / right-click / File > Print paths, and the Checklist report's Save As /
+     Share. Viewing a report on screen stays free.
+  3. **Automatic backups** (Settings > Automatic Backups). Manual backup and restore stay
+     free in the trial on purpose, so a trial user is never locked out of their own data —
+     which also reads better to App Review.
+
+  Everything else is identical between trial and full. The $19.99 one-time purchase lifts
+  all three. Written this way in the pricing section, one FAQ answer and `terms.html`; keep
+  those in step, and keep them in step with the app — the site is now making three specific
+  promises about what the trial does and does not do.
 - **All $0.99 / "introductory price" language is gone from the site** (Sept 5, 2026). The
   trial ships shortly, so the page describes the trial model only rather than hedging about
   what is on sale today. The one place the old paid app is acknowledged is the FAQ answer
