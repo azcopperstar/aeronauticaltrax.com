@@ -12,7 +12,7 @@ support.html        support page + FAQ  (App Store support URL)
 terms.html          terms of use / EULA supplement
 404.html            not-found page (GitHub Pages serves this automatically)
 assets/style.css    all styling, light + dark themes via CSS custom properties
-CNAME               custom domain for GitHub Pages
+CNAME               custom domain (created by GitHub when you set it in Settings > Pages)
 robots.txt          crawler policy
 sitemap.xml         page list for search engines
 ```
