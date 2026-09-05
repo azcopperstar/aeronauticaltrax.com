@@ -483,3 +483,51 @@
   border-top: 1px solid var(--line);
   font-size: .93rem; color: var(--ink-2); max-width: 60ch;
 }
+
+/* ---------- brand hub (index.html) ---------- */
+.hub-hero { max-width: 46em; }
+.hub-hero h1 {
+  font-family: var(--display); font-weight: 800; letter-spacing: -.025em;
+  font-size: clamp(2.1rem, 5.4vw, 3.5rem); line-height: 1.06;
+  margin-top: .75rem;
+}
+.hub-hero .hero-lede { max-width: 40em; }
+
+.apps { display: grid; gap: 1.25rem; margin-top: 2.75rem; align-items: start; }
+@media (min-width: 860px) { .apps { grid-template-columns: repeat(3, 1fr); } }
+.app-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.6rem;
+  background: var(--surface);
+  display: flex; flex-direction: column; height: 100%;
+}
+.app-live { border-color: var(--accent); }
+.app-head { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.app-head h3 { font-family: var(--display); font-size: 1.2rem; font-weight: 700; }
+.app-status {
+  font-family: var(--mono); font-size: .66rem; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: .24rem .55rem; border-radius: 999px; white-space: nowrap;
+}
+.app-status-live { color: var(--ok); background: var(--ok-bg); }
+.app-status-dev  { color: var(--ink-3); border: 1px solid var(--line-strong); }
+.app-for {
+  margin-top: .9rem; font-family: var(--mono); font-size: .78rem;
+  letter-spacing: .02em; color: var(--accent-text);
+}
+.app-desc { margin-top: .8rem; font-size: .93rem; color: var(--ink-2); }
+.app-note {
+  margin-top: 1rem; padding-top: .9rem; border-top: 1px solid var(--line);
+  font-size: .86rem; color: var(--ink-3);
+}
+.app-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: auto; padding-top: 1.4rem; }
+.app-actions .btn { font-size: .88rem; padding: .55rem .9rem; }
+
+.principles { display: grid; gap: 1.6rem 2.5rem; margin-top: 2.5rem; }
+@media (min-width: 720px) { .principles { grid-template-columns: 1fr 1fr; } }
+.principle h3 {
+  font-family: var(--display); font-size: 1rem; font-weight: 700; color: var(--ink);
+  padding-bottom: .5rem; border-bottom: 1px solid var(--line);
+}
+.principle p { margin-top: .7rem; font-size: .93rem; color: var(--ink-2); max-width: 42ch; }

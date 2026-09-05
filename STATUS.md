@@ -41,12 +41,21 @@ CNAME           managed by GitHub, do not edit by hand
 - [ ] **Ship the receipt logic.** The site now promises, in three places, that existing
       $0.99 purchasers are unlocked to the full version for free. That promise is only good
       if the entitlement check actually ships with the free-tier release.
-- [ ] **Upload the screenshots.** All three sets are built and sitting in
-      `screenshots-appstore/`; nothing has been uploaded to App Store Connect yet.
-      iPhone 6.9" is empty on the listing and 6.5" still holds 9 old shots (some are
-      camera-roll `IMG_99xx.jpeg` files) — delete those once 6.9" is filled, since Apple
-      scales the largest size down for every smaller device. iPad 13" holds 3 old shots to
-      replace. The Mac slot is locked until the next macOS version.
+- [ ] **Upload the Mac screenshots.** The eight 2880x1800 shots in
+      `screenshots-appstore/mac/` still have nowhere to go — the macOS version 2026.5.21 is
+      Ready for Distribution and its media is locked. Upload them with the next macOS
+      version, same order as the other platforms.
+
+      iPhone and iPad were uploaded and verified Sept 5, 2026: iPhone 6.9" holds the eight
+      in order 01-08, the nine old 6.5" shots were deleted (Apple scales the largest size
+      down for every smaller device, so they were redundant), and iPad 13" holds its eight
+      in order with the three old ones removed.
+
+      **Gotcha worth remembering:** dragging all eight files in at once uploads them in
+      COMPLETION order, not filename order — the first attempt landed as
+      03, 07, 02, 08, 01, 06, 04, 05. Drag them in ONE AT A TIME in filename order, or be
+      prepared to drag thumbnails around afterwards. Order matters: it is the order buyers
+      see, and the first three are what appear on the app installation sheet.
 - [ ] **Swap `02-dashboard.png` once the count string is fixed.** The dashboard reads
       "Totals limited to 7 of 3 vehicles" in the iPhone and iPad shots. Shipped as-is by
       choice on Sept 5, 2026.
@@ -102,6 +111,43 @@ What was learned doing it, so it does not have to be learned again:
 The landing page `.shots` section was rebuilt at the same time — Mac full-width above two
 iPhone shots, each in its own framed container so it reads correctly in both themes.
 Web images are WebP: 640px wide for the phones, 1280px for the Mac.
+
+---
+
+### Site structure (restructured Sept 5, 2026)
+
+The domain is the **AeroNauticalTrax** brand hub; each product gets a folder.
+
+```
+/                      brand hub — the three apps, shared principles
+/vehicletrax/          the VehicleTrax product page (was / until Sept 5)
+/vehicletrax/whatsnew.html   VehicleTrax release notes  (generated)
+/vehicletrax/changelog.md    VehicleTrax release notes  (source, synced from the app)
+/support.html          shared across all products
+/privacy.html          shared
+/terms.html            shared
+/assets/               shared styles, icons, screenshots
+/tools/                generators
+```
+
+`AeroTrax` (small aircraft) and `NauticalTrax` (small/mid-size boats) are named on the hub
+and marked **In development**, with no download or purchase links and an explicit "Not yet
+available" line on each card. They stay that way until the apps are real — the site should
+never imply something is buyable before it is. When one ships, give it `/aerotrax/` with
+its own `changelog.md`, and add a generator target alongside VehicleTrax's.
+
+Legal and support pages are deliberately SHARED. That holds only while all products
+collect no data and sync via iCloud. The moment one of them differs, split them per
+product before shipping it.
+
+**Paths matter here.** Pages under `/vehicletrax/` reference `../assets/…` and `../support.html`;
+the hub uses `assets/…`. Relative links only — absolute paths break the `github.io` test URL.
+
+**Still pointing at the old location:** the App Store Connect Marketing URL is
+`https://aeronauticaltrax.com`, which is now the hub rather than the VehicleTrax page. That
+still resolves and is defensible, but `https://aeronauticaltrax.com/vehicletrax/` is the
+more accurate target. Support and Privacy URLs are unaffected — those pages are shared and
+did not move.
 
 ---
 

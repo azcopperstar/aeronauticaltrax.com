@@ -22,7 +22,7 @@ DEFAULT_SRC = pathlib.Path(
     "/Users/xcodedev/Library/CloudStorage/Dropbox/xCode/LandShip/LandShip"
     "/0 Main/changelog.md"
 )
-DST = ROOT / "changelog.md"
+DST = ROOT / "vehicletrax" / "changelog.md"
 
 
 def sanitise(text):

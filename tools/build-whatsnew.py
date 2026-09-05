@@ -21,8 +21,8 @@ import re
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SRC = ROOT / "changelog.md"
-OUT = ROOT / "whatsnew.html"
+SRC = ROOT / "vehicletrax" / "changelog.md"
+OUT = ROOT / "vehicletrax" / "whatsnew.html"
 
 SECTIONS = ("ADDED", "FIXED", "CHANGED", "NOTES")
 SECTION_LABEL = {"ADDED": "Added", "FIXED": "Fixed",
@@ -151,16 +151,16 @@ SHELL = """<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="assets/icon-16.png" sizes="16x16" type="image/png">
-<link rel="apple-touch-icon" href="assets/icon-180.png">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="../assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../assets/icon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../assets/icon-180.png">
+<link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <img class="brand-mark" src="assets/brand-mark.webp" width="30" height="30" alt="" aria-hidden="true" decoding="async">
+    <a class="brand" href="../index.html">
+      <img class="brand-mark" src="../assets/brand-mark.webp" width="30" height="30" alt="" aria-hidden="true" decoding="async">
       <span>
         <span class="brand-name">VehicleTrax</span>
         <span class="brand-sub">by AeroNauticalTrax</span>
@@ -169,7 +169,7 @@ SHELL = """<!doctype html>
     <nav class="mast-nav" aria-label="Primary">
       <a class="opt" href="index.html#tracks">What it tracks</a>
       <a class="opt" href="index.html#pricing">Pricing</a>
-      <a class="opt" href="support.html">Support</a>
+      <a class="opt" href="../support.html">Support</a>
       <a class="btn btn-primary" href="https://apps.apple.com/us/app/vehicletrax/id6751254040">App Store</a>
     </nav>
   </div>
@@ -199,9 +199,9 @@ __RELEASES__
       <nav class="foot-links" aria-label="Footer">
         <a href="https://apps.apple.com/us/app/vehicletrax/id6751254040">App Store</a>
         <a href="whatsnew.html">What's new</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
+        <a href="../support.html">Support</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../terms.html">Terms of Use</a>
       </nav>
     </div>
     <p class="foot-legal">
@@ -217,7 +217,7 @@ __RELEASES__
 def main():
     blocks = parse(SRC.read_text(encoding="utf-8"))
     OUT.write_text(SHELL.replace("__RELEASES__", render(blocks)), encoding="utf-8")
-    print(f"{OUT.name}: {len(blocks)} releases")
+    print(f"{OUT.parent.name}/{OUT.name}: {len(blocks)} releases")
     for b in blocks:
         print(f"  {pretty_version(b['version']):<12} "
               f"added {count(b,'ADDED'):>3}  fixed {count(b,'FIXED'):>3}  "
