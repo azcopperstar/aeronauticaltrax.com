@@ -117,13 +117,15 @@ Web images are WebP: 640px wide for the phones, 1280px for the Mac.
 - **Color** is a token system in `assets/style.css`. The green/amber/red accents are the
   app's own maintenance states, not decoration. Light and dark both work off the same
   tokens; never define a color only inside a media query.
-- **The free tier is gated by vehicle count, not by features** (decided Sept 5, 2026). The
-  free version is the whole app — maintenance, fuel, parts, projects, trips, PDF export —
-  limited to one vehicle. The $19.99 unlock lifts the limit and adds nothing else. Written
-  this way in the pricing section, the FAQ and `terms.html`; keep those three in step.
-- **The pricing section stays published before launch**, with a "Not yet available" notice
-  above the tiers making clear $0.99 is what is actually on sale. Remove the notice the day
-  the new version ships.
+- **It is a TRIAL, not a free tier** (corrected Sept 5, 2026 — an earlier draft had this
+  wrong). The trial is a free download limited to **3 vehicles, 30 records per table, and
+  PDF reports that display on screen but cannot be exported**. It does not expire. The
+  $19.99 one-time purchase removes all three limits. Written this way in the pricing
+  section, two FAQ answers and `terms.html`; keep those in step.
+- **All $0.99 / "introductory price" language is gone from the site** (Sept 5, 2026). The
+  trial ships shortly, so the page describes the trial model only rather than hedging about
+  what is on sale today. The one place the old paid app is acknowledged is the FAQ answer
+  for earlier purchasers, worded as "bought VehicleTrax as a paid app" without a price.
 - **App Store Connect URLs were fixed Sept 5, 2026** (app ID 6751254040). Privacy Policy
   URL → `https://aeronauticaltrax.com/privacy.html` (was a GitHub repo path returning 404).
   On the iOS 2026.7.19 version: Support URL → `.../support.html` (was `http://` on the
