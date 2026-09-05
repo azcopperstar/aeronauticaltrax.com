@@ -38,13 +38,13 @@ CNAME           managed by GitHub, do not edit by hand
 
 ## Still to do
 
+- [ ] **Ship the receipt logic.** The site now promises, in three places, that existing
+      $0.99 purchasers are unlocked to the full version for free. That promise is only good
+      if the entitlement check actually ships with the free-tier release.
 - [ ] **Screenshots.** The landing page has three empty slots (`.shots` section in
       `index.html`). Need two iPhone portrait captures and one Mac window capture. The
       section is currently three portrait boxes — rebuild it around the real aspect ratios
       once the images exist, since a Mac window is landscape.
-- [ ] **Confirm the free vs paid split.** The pricing section currently claims the free tier
-      is one vehicle plus maintenance and fuel logs, with everything else behind the $19.99
-      unlock. That was a placeholder guess, not JP's actual plan.
 - [ ] **Update App Store Connect URLs** — Privacy Policy, Support, and Marketing. The
       listing's privacy URL still points at a GitHub repo path that returns 404.
 - [ ] **Review the legal pages.** `privacy.html` and `terms.html` are drafts written to match
@@ -53,8 +53,6 @@ CNAME           managed by GitHub, do not edit by hand
 - [ ] **Universal links** — add `.well-known/apple-app-site-association`. Needs the Apple
       Team ID and the bundle identifier.
 - [ ] **Cancel the GoDaddy Website Builder subscription.** It serves nothing now.
-- [ ] **Decide whether to publish the pricing section before launch.** It currently
-      advertises free + $19.99, which is not live yet. The app is $0.99 today.
 
 ---
 
@@ -70,6 +68,13 @@ CNAME           managed by GitHub, do not edit by hand
 - **Color** is a token system in `assets/style.css`. The green/amber/red accents are the
   app's own maintenance states, not decoration. Light and dark both work off the same
   tokens; never define a color only inside a media query.
+- **The free tier is gated by vehicle count, not by features** (decided Sept 5, 2026). The
+  free version is the whole app — maintenance, fuel, parts, projects, trips, PDF export —
+  limited to one vehicle. The $19.99 unlock lifts the limit and adds nothing else. Written
+  this way in the pricing section, the FAQ and `terms.html`; keep those three in step.
+- **The pricing section stays published before launch**, with a "Not yet available" notice
+  above the tiers making clear $0.99 is what is actually on sale. Remove the notice the day
+  the new version ships.
 - **Existing $0.99 purchasers get the full version free.** Stated in the FAQ and in
   `terms.html`. Only keep that promise if the receipt logic actually ships.
 
