@@ -189,7 +189,18 @@ that currently works fully offline, and VehicleTrax users are often out of signa
   figures — a logbook/instrument feel rather than generic SaaS.
 - **Color** is a token system in `assets/style.css`. The green/amber/red accents are the
   app's own maintenance states, not decoration. Light and dark both work off the same
-  tokens; never define a color only inside a media query.
+  tokens; never define a color only inside a media query. There are TWO dark blocks — the
+  `prefers-color-scheme` media query and `:root[data-theme="dark"]` — and they must be kept
+  identical; change one, change both.
+- **`--accent` is for fills, `--accent-text` is for type** (added Sept 5, 2026). The vivid
+  orange passes contrast as a button background with white on it, but fails as text on the
+  light ground, so text uses a deeper tone. Don't collapse them back into one token.
+- **Dark mode was rebalanced Sept 5, 2026** away from near-black. The ground moved
+  `#0F1517` -> `#171F22` with surfaces and lines lifted to match, and body text from a grey
+  `#A2AFAB` to a muted white `#C5CFCB`. The problem was never too little contrast — headings
+  measured 15.4:1, high enough to halate against near-black while the grey body text read
+  dim beside them. Body text is now 10.5:1 and muted text 7.8:1. If dark mode ever feels
+  hard to read again, check whether contrast is too HIGH before pushing it higher.
 - **It is a TRIAL, not a free tier** (corrected Sept 5, 2026 — an earlier draft had this
   wrong). The trial is a free download and does not expire. Exactly three things are
   restricted, confirmed against the shipping implementation Sept 5, 2026:
