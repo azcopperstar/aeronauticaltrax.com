@@ -118,7 +118,7 @@ Web images are WebP: 640px wide for the phones, 1280px for the Mac.
   app's own maintenance states, not decoration. Light and dark both work off the same
   tokens; never define a color only inside a media query.
 - **It is a TRIAL, not a free tier** (corrected Sept 5, 2026 — an earlier draft had this
-  wrong). The trial is a free download limited to **3 vehicles, 30 records per table, and
+  wrong). The trial is a free download limited to **2 vehicles, 10 records per table, and
   PDF reports that display on screen but cannot be exported**. It does not expire. The
   $19.99 one-time purchase removes all three limits. Written this way in the pricing
   section, two FAQ answers and `terms.html`; keep those in step.
