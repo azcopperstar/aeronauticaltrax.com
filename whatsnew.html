@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's new — VehicleTrax</title>
+<meta name="description" content="Release notes for VehicleTrax on iPhone, iPad and Mac — what was added, fixed and changed in each version.">
+<meta name="apple-itunes-app" content="app-id=6751254040">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VehicleTrax">
+<meta property="og:title" content="What's new — VehicleTrax">
+<meta property="og:description" content="Release notes for VehicleTrax on iPhone, iPad and Mac — what was added, fixed and changed in each version.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="icon" href="assets/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/icon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="assets/brand-mark.webp" width="30" height="30" alt="" aria-hidden="true" decoding="async">
+      <span>
+        <span class="brand-name">VehicleTrax</span>
+        <span class="brand-sub">by AeroNauticalTrax</span>
+      </span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a class="opt" href="index.html#tracks">What it tracks</a>
+      <a class="opt" href="index.html#pricing">Pricing</a>
+      <a class="opt" href="support.html">Support</a>
+      <a class="btn btn-primary" href="https://apps.apple.com/us/app/vehicletrax/id6751254040">App Store</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap page-head">
+    <p class="eyebrow">Release notes</p>
+    <h1>What's new in VehicleTrax</h1>
+    <p class="updated">The same notes the app shows you after an update. Newest first — open any
+    version to read what changed.</p>
+  </div>
+
+  <div class="wrap prose">
+<details class="release" open>
+  <summary><span class="rel-ver">2026-09-02</span> <span class="rel-chip rel-latest">Latest</span><span class="rel-chip rel-added">75 added</span><span class="rel-chip rel-fixed">15 fixed</span></summary>
+  <div class="rel-body">
+    <h3 class="rel-sec">Notes</h3>
+    <ul class="rel-list">
+    <li>This is a major revision with many fixes and new features.</li>
+    <li>Email us (using the above link or the link on the Resouces tab) with suggestions for improvements, application features or issues with the application.</li>
+    </ul>
+    <h3 class="rel-sec">Added</h3>
+    <h4 class="rel-area">Dashboard</h4>
+    <ul class="rel-list">
+    <li><strong>New customization sheet</strong> (slider icon in the toolbar) lets you choose which cards are shown and drag to reorder them. The scheme is saved to your account and applies on every device.</li>
+    <li><strong>New vehicle checklist</strong> in the customization sheet lets you exclude specific vehicles from &quot;All Vehicles&quot; totals across every card.</li>
+    <li><strong>New &quot;Inventory Status&quot; card</strong> lists inventory-tracked parts that are low or out of stock, with a detail view grouping parts into Out of Stock, Low Stock, and Well Stocked.</li>
+    </ul>
+    <h4 class="rel-area">Vehicles</h4>
+    <ul class="rel-list">
+    <li><strong>Added Wheel Stud Size, Wheel Nut Socket, and Wheel Nut Torque</strong> text fields to the Tire Information section.</li>
+    <li><strong>Weight scale reading fields to the Weight Data</strong> section (all axles except trailer) and Total Rolling Weight (all axles combined) are computed and displayed automatically.</li>
+    <li><strong>CAT Scale Tickets sub-form</strong> Each vehicle can store unlimited weigh station tickets.</li>
+    <li><strong>Ability to link vehicle records together</strong> to track different aspects of the same physical vehicle (e.g. Chassis, Engine, Body/House).</li>
+    <li><strong>Linked to [vehicle]</strong> if the vehicle links to a master, and &quot;Linked vehicles: [names]&quot; if the vehicle is itself a master.</li>
+    </ul>
+    <h4 class="rel-area">Parts</h4>
+    <ul class="rel-list">
+    <li><strong>Inventory Tracking card</strong> on each part — a &quot;Track Inventory for this Part&quot; checkbox reveals Quantity On Hand, Reorder Point, and Reorder Quantity fields.</li>
+    <li><strong>Consuming an inventory-tracked part on a service record</strong> automatically subtracts the quantity used from that part&#x27;s inventory, and restores it if the service record is later deleted or the part/quantity is changed.</li>
+    <li><strong>Remaining inventory is now shown next to the part</strong> on the Parts list, on Service Items, and on the service record that consumed it, with a low-stock warning once quantity on hand falls to or below the reorder point.</li>
+    </ul>
+    <h4 class="rel-area">Fuel Log</h4>
+    <ul class="rel-list">
+    <li><strong>Field to track DEF price per gallon</strong> DEF remaining in 1/8 increments</li>
+    <li><strong>Exit Time field added below Date/Time</strong> so a fuel log records both arrival and departure the same way a travel log&#x27;s enroute stop does.</li>
+    <li><strong>Edit form is reordered to match a travel log&#x27;s enroute fuel stop</strong></li>
+    <li><strong>Fuel Level Start and Fuel Level End quantities</strong> are now editable too, matching the travel log.</li>
+    <li><strong>DEF Cost (DEF added times its price) below DEF Price</strong> the same way fuel shows Cost below Price.</li>
+    <li><strong>Fluid Checks button now matches a travel log&#x27;s enroute stop</strong></li>
+    <li><strong>Fuel line on each row now also shows price per unit</strong></li>
+    <li><strong>The section header now shows Total Fuel, Total Cost, and Average Cost/Unit</strong></li>
+    </ul>
+    <h4 class="rel-area">Trip Log</h4>
+    <ul class="rel-list">
+    <li><strong>Date/time field for each enroute fuel stop</strong></li>
+    <li><strong>Option to attach up to 3 photos to each enroute fuel stop</strong></li>
+    <li><strong>Exit time field for each enroute fuel stop</strong></li>
+    <li><strong>&quot;Other&quot; stop reason</strong> opens a text field to enter a custom description.</li>
+    <li><strong>Comments field added to each enroute stop for free-form notes</strong></li>
+    <li><strong>Trip Group field added to each travel log record</strong> Groups allow related trip legs to be associated under a named group.</li>
+    <li><strong>Stop Location field no longer auto-fills with current location</strong></li>
+    <li><strong>Enroute stop fields stay hidden</strong> on a new stop until a Stop Reason is chosen.</li>
+    <li><strong>Each trip row now shows both &quot;Total Enroute&quot; (start to end) and &quot;Underway&quot;</strong> (total enroute minus time spent at enroute stops) time.</li>
+    <li>The Quantity field on an enroute stop is hidden unless Stop Reason is set to &quot;Fuel&quot;:</li>
+    <li><strong>Each trip row now shows Group (if assigned)</strong> Total Miles, and Total Fuel used, together on one line (e.g. &quot;Group: Trip A   142mi   15.2gal&quot;).</li>
+    <li><strong>&quot;Total Enroute&quot; time line</strong> on each trip row is replaced with &quot;Fuel Burn&quot; for that individual leg</li>
+    <li><strong>The section header now shows Total Miles</strong> Total Fuel, and Average Economy on one line, plus Time Underway and Average Speed on a second line, for the currently listed trips.</li>
+    <li><strong>Each enroute fuel stop now records</strong> Fuel Type, Fuel Level Start, Fuel Level End and DEF Level.</li>
+    <li><strong>An enroute stop&#x27;s entry and exit times are now stored</strong> as &quot;not recorded&quot; until they are actually set, rather than defaulting to whenever the record happened to be created.</li>
+    <li><strong>Each enroute fuel stop can now be linked to a fuel log that already exists</strong></li>
+    <li><strong>&quot;Create Fuel Log&quot; toggle</strong> on an enroute stop only appears once Stop Reason is set to &quot;Fuel&quot;.</li>
+    <li><strong>Each enroute stop&#x27;s &quot;STOP 1&quot;…&quot;STOP 6&quot; heading</strong> now sits on a filled banner rather than being a thin centred label, so it&#x27;s obvious where one stop&#x27;s fields end and the next begins.</li>
+    <li><strong>An enroute fuel stop&#x27;s Odometer and Engine Hours</strong> now sit directly below Location, with Fuel Type under them, ahead of the tank readings and the amount added.</li>
+    <li><strong>An enroute fuel stop&#x27;s fields are reordered to follow the order things happen</strong> Fuel Level Start now sits between Location and Quantity, and Fuel Level End directly below Quantity.</li>
+    <li>Each enroute fuel stop can now have its Fuel Level Start, Fuel Level End and DEF Level: quantities typed in directly, the same as Travel Start and Travel End.</li>
+    <li>The fuel quantity beside the Fuel Level dropdown on Travel Start and Travel End is now editable: for vehicles with a digital fuel readout where an exact figure beats an eighths estimate.</li>
+    <li><strong>An enroute fuel stop now records DEF</strong> price per unit alongside DEF Added, saved to the stop&#x27;s linked fuel log.</li>
+    <li><strong>Oil Added is now on its own row</strong> at the top of the Fluids Added group instead of sharing a row with DEF Added.</li>
+    <li><strong>The &quot;Fluid Checks&quot; button on Travel Start, Travel End</strong> and each enroute stop now shows how many were done.</li>
+    <li><strong>A &quot;Fluid Checks&quot; button has been added</strong> to the Travel Start and Travel End sections.</li>
+    </ul>
+    <h4 class="rel-area">Trip Log &amp; Fuel Log</h4>
+    <ul class="rel-list">
+    <li><strong>A &quot;Fluid Checks&quot; button that opens a popup sheet</strong></li>
+    <li><strong>A stop&#x27;s Exit Time can no longer be set earlier than its entry Date/Time</strong></li>
+    <li><strong>DEF Level End now fills in automatically</strong> as DEF Level Start plus DEF Added, capped at the tank&#x27;s capacity, the same way Fuel Level End derives from the amount of fuel added. It can still be overridden by hand.</li>
+    <li><strong>DEF fields</strong> (DEF Level Start, DEF Added, DEF Price, DEF Level End) only appear when Fuel Type is set to &quot;Diesel&quot;, on an enroute fuel stop as well as the fuel log.</li>
+    <li><strong>New &quot;DEF Level Start&quot; field</strong> records the DEF level before adding any, sitting directly above DEF Added on both an enroute fuel stop and the fuel log.</li>
+    <li><strong>Tank readings in the detail views</strong> now show the actual quantity next to its fraction.</li>
+    <li><strong>DEF now tracks an actual quantity</strong> not just an eighths estimate.</li>
+    </ul>
+    <h4 class="rel-area">Trip Statistics</h4>
+    <ul class="rel-list">
+    <li><strong>Three computed time fields</strong> Total Elapsed, Time Underway and Engine Time.</li>
+    <li><strong>Vehicle Totals</strong> the same three time fields accumulated across all trips — Total Elapsed, Underway Hours, and Engine Time.</li>
+    </ul>
+    <h4 class="rel-area">Service Records &amp; MX Items</h4>
+    <ul class="rel-list">
+    <li><strong>&quot;Transfer to Additions&quot;</strong> a new LINK TO ADDITIONS card in the service record edit form allows each part and labor line item to be individually transferred into the Additions tracker.</li>
+    <li><strong>Added a custom tracking field to each service record</strong> user defines a field name, unit of measure, and numeric value to track anything beyond Miles/Engine Hours (e.g. Water Gallons).</li>
+    <li><strong>Service Items now show remaining inventory</strong> next to any inventory-tracked part picked for that item.</li>
+    <li><strong>Up to 5 embedded sub service items per record</strong> a new SUB SERVICE ITEMS card lets one service record cover several service items from the same visit — an oil change, a filter swap, and a tire rotation, say, all in the same shop stop — instead of splitting them across separate records. Each of the 5 slots can be picked from your Service Items list or typed manually, with its own Description and Labor Cost field. Item 2 only appears once Item 1 has a name, Item 3 once Item 2 does, and so on through Item 5, the same progressive reveal Trip Log already uses for its 6 enroute stops. Picking a Database Item copies its description and labor cost into the record as a one-time snapshot: it stays exactly as copied even if that Service Item&#x27;s own cost is edited afterward, so a saved record always reflects what the visit actually cost at the time. Sub-item labor rolls into the record&#x27;s Grand Total, its cost-per-mile and cost-per-engine-hour figures, the read-only SUB SERVICE ITEMS summary, the PDF report&#x27;s Costs column and summary block, and the Dashboard&#x27;s Cost Snapshot (month-to-date, last-90-days, year-to-date, and the top-spend chart). Re-picking a different Database Item on the record replaces every previously-copied sub-item, the same way it already replaces the description, vendor, and parts.</li>
+    <li><strong>Service Items can now be marked &quot;All Vehicles&quot;</strong> the Vehicle field on a Service Item template can be set to a new &quot;All Vehicles&quot; choice instead of one specific vehicle, for a generic task like &quot;Check Oil Level&quot; or &quot;Inspect Fire Extinguisher&quot; that applies fleet-wide rather than to one vehicle&#x27;s particular maintenance schedule. An &quot;All Vehicles&quot; item shows up alongside a vehicle&#x27;s own items in the Database Item picker and in all 5 Sub Item pickers on a service record, and in the Service Items list itself even while that list is scoped to one specific vehicle. Note that Dashboard&#x27;s Next Service Due and Maintenance Status cards still compute a due date against one vehicle&#x27;s odometer/hours, so a generic &quot;All Vehicles&quot; item won&#x27;t produce a due-date on those cards — the same limitation parts already have, since parts never tracked service intervals either.</li>
+    <li><strong>Service Items can bundle up to 5 sub-items of their own</strong> a Service Item template now has the exact same SUB SERVICE ITEMS card as a service record, letting a &quot;master&quot; item (e.g. &quot;50-Hour Service&quot;) list up to 5 other Service Items it&#x27;s meant to cover. Picking that master item on a service record&#x27;s Database Item picker now imports its whole bundle in one step — all 5 of the master&#x27;s sub-items are copied straight into the record&#x27;s own SUB SERVICE ITEMS slots, on top of the record&#x27;s usual description/vendor/parts copy — instead of picking each one by hand. The import is a one-time snapshot of the master&#x27;s own sub-items only (one level deep — a sub-item&#x27;s own bundle, if it has one, isn&#x27;t expanded further), and re-picking the master item later re-imports and replaces whatever sub-items were there before, the same overwrite-on-repick behavior as every other field that copies from a Service Item template.</li>
+    <li><strong>Each of a service record&#x27;s 5 sub-items now has its own multi-line Comments field</strong> sitting below that sub-item&#x27;s Labor Cost, for notes specific to that one piece of work — what was actually found or done, a part substitution, anything worth remembering next time. Picking a Database Item for that slot seeds Comments from that Service Item&#x27;s own Item Notes field, the same one-time-snapshot copy already used for Description and Labor Cost, so re-picking a different item replaces it too; from there it&#x27;s freely editable and independent of the source item. It only shows in the read-only summary when something&#x27;s actually been typed, same as the record&#x27;s other optional fields. On the read-only Service Record details screen, each sub-item now renders as its own card (SUB SERVICE ITEM 1 through 5) instead of one shared card divided by lines, matching the separation the PART 1...PART 5 cards already use.</li>
+    <li><strong>A Service Item&#x27;s own bundled sub-items now get the same Comments field</strong> each of the 5 slots on a Service Item template (e.g. &quot;50-Hour Service&quot;) has a Comments field just like a service record&#x27;s does, seeded the same way from the picked sub-item&#x27;s Item Notes. When that master item is later picked on a service record, the record&#x27;s SUB SERVICE ITEMS import now carries each sub-item&#x27;s Comments along too, instead of leaving that slot&#x27;s Comments blank.</li>
+    <li><strong>New &quot;Mark as Sub-Item&quot; field on Service Items</strong> a checkbox in SERVICE ITEM DETAILS flags an item as meant to be picked as a sub-item rather than a standalone item — useful for granular tasks like &quot;Check Coolant System Level&quot; that rarely stand on their own. A flagged item shows &quot;(Sub-Item)&quot; after its name everywhere Service Items appear in a picker dropdown (the main Database Item picker, every Sub Item picker on a service record, and every Sub Item picker on another Service Item&#x27;s own bundle), so it&#x27;s easy to tell apart from a standalone master item at a glance. The flag is purely a label — it doesn&#x27;t hide the item from any picker or stop it from being picked as a master item too.</li>
+    <li><strong>The Service Items list now shows both sides of the sub-item relationship</strong> a master item&#x27;s row lists its bundled sub-items under a &quot;Sub-Items:&quot; heading, one bullet per sub-item (with that sub-item&#x27;s labor cost, if any) right under its parts, and any item marked &quot;Mark as Sub-Item&quot; gets an orange &quot;SUB-ITEM&quot; tag next to its name plus an orange-tinted card background — vs. the usual blue — so browsing the list makes it obvious at a glance which items are meant to stand alone and which are meant to be picked into something else.</li>
+    <li><strong>New &quot;List Sub-Items Last&quot; checkbox above the Service Items list</strong> when checked, every item marked &quot;Mark as Sub-Item&quot; moves to the bottom of the list, after all standalone items — the active sort still governs order within each of those two groups, it just no longer interleaves sub-items among the standalone ones. The setting is remembered between visits to the list.</li>
+    <li><strong>An &quot;All Vehicles&quot; item now says so on its row when a specific vehicle is scoped</strong> previously the row only showed a vehicle name while browsing &quot;All Vehicles&quot; itself, so a generic item mixed into a single vehicle&#x27;s list looked identical to that vehicle&#x27;s own items with nothing to explain why it showed up there.</li>
+    <li>Each embedded sub-item on a service record or Service Item now gets its own card in the edit form: previously all 5 slots (ITEM 1 through ITEM 5) shared one long card, separated only by a banner and a divider. Each slot is now its own card, matching how PART 1 through PART 5 already stand apart, so it&#x27;s easier to see where one sub-item ends and the next begins. Sub-items on a Service Item&#x27;s read-only details screen got the same split (matching the service record details screen, which already had it).</li>
+    </ul>
+    <h4 class="rel-area">Project List</h4>
+    <ul class="rel-list">
+    <li><strong>&quot;Transfer to Additions&quot;</strong> same link-to-Additions capability added to the project item edit form.</li>
+    </ul>
+    <h4 class="rel-area">Settings</h4>
+    <ul class="rel-list">
+    <li><strong>New &quot;Fuel Log — Fluid Checks&quot;</strong> section in Settings.</li>
+    </ul>
+    <h4 class="rel-area">Help &amp; Feedback</h4>
+    <ul class="rel-list">
+    <li><strong>New &quot;Send Feedback&quot; form</strong> under Resources on iPhone/iPad, and in the Support section of Help on Mac.</li>
+    <li><strong>What&#x27;s New now groups each version&#x27;s entries</strong> under the area they affect, each on a faint tinted heading, rather than running them together as one long list.</li>
+    </ul>
+    <h4 class="rel-area">Backup &amp; Restore</h4>
+    <ul class="rel-list">
+    <li><strong>New &quot;Automatic Backups&quot; section</strong> lets you choose how often &amp; how many recent backups to keep.</li>
+    <li>The backup date under the Backup button is now two separate, independently tracked lines:</li>
+    <li>When restoring while iCloud sync is active, you can now choose &quot;Resync from iCloud&quot;: (re-downloads vehicle/service data fresh from iCloud) or &quot;Restore Exact Snapshot&quot; (forces the backup&#x27;s database back in exactly as saved).</li>
+    </ul>
+    <h4 class="rel-area">PDF Reports</h4>
+    <ul class="rel-list">
+    <li><strong>Reports were redesigned</strong> with a consistent portrait layout, combined data categories, an in-report vehicle picker, and a totals summary specific to each report&#x27;s own data.</li>
+    </ul>
+    <h3 class="rel-sec">Fixed</h3>
+    <h4 class="rel-area">Vehicles</h4>
+    <ul class="rel-list">
+    <li><strong>Vehicle name not persisting after edit</strong> (EditVehicle.swift): updateItem() was writing to dataSet.name but not dataSet.displayName.</li>
+    <li><strong>Editing a vehicle&#x27;s Name now warns that other records</strong> reference the vehicle by name and might lose their link if the name changes. On Save, the user can choose to automatically update all of those records to the new name, or save without updating them.</li>
+    <li><strong>A newly created vehicle&#x27;s Name field now starts blank</strong> with a &quot;(New Vehicle)&quot; placeholder instead of showing its internal placeholder ID.</li>
+    </ul>
+    <h4 class="rel-area">Fuel Log</h4>
+    <ul class="rel-list">
+    <li><strong>The edit form now re-reads the record when opened</strong> so values written by a travel log&#x27;s enroute stop (DEF price, quantities, levels) appear instead of whatever was loaded the first time the form was shown.</li>
+    <li><strong>Saving no longer discards the value in whichever field you were still typing in</strong></li>
+    </ul>
+    <h4 class="rel-area">Trip Log &amp; Fuel Log</h4>
+    <ul class="rel-list">
+    <li><strong>Exact typed fuel and DEF quantities are no longer replaced</strong> by their eighths equivalents every time the record is opened.</li>
+    </ul>
+    <h4 class="rel-area">Service Records</h4>
+    <ul class="rel-list">
+    <li><strong>Miles and Engine Hours are no longer show</strong> n in the records list when their value is 0.</li>
+    <li><strong>Renaming a Service Item now also updates every sub-item slot that referenced it</strong> previously the rename-cascade prompt only fixed up a record&#x27;s own Database Item link, so a rename could silently orphan any of the 5 sub-item slots (on a service record or on another Service Item&#x27;s own bundle) that pointed to the renamed item by name.</li>
+    </ul>
+    <h4 class="rel-area">Backup &amp; Restore</h4>
+    <ul class="rel-list">
+    <li><strong>The post-backup summary dialog is now scrollable</strong></li>
+    <li><strong>Creating a backup no longer freezes the app while it scans your data</strong></li>
+    <li><strong>Backups now include hidden support files that were previously skipped</strong></li>
+    <li><strong>Selecting a folder that isn&#x27;t actually a valid backup now shows an error</strong> instead of silently reporting &quot;Restore complete&quot; with nothing restored.</li>
+    <li>If a restore is interrupted partway through (e.g. low disk space), your existing data is now safely rolled back: instead of being left partially overwritten.</li>
+    <li><strong>After a successful restore, the app now requires a full restart</strong> to finish loading the restored data safely.</li>
+    <li><strong>When iCloud sync is active, restoring no longer automatically overwrites</strong> your local database with the backup snapshot.</li>
+    </ul>
+  </div>
+</details>
+<details class="release">
+  <summary><span class="rel-ver">2026-05-21</span><span class="rel-chip rel-added">6 added</span><span class="rel-chip rel-fixed">9 fixed</span></summary>
+  <div class="rel-body">
+    <h3 class="rel-sec">Added</h3>
+    <ul class="rel-list">
+    <li>Added &#x27;Settings&#x27; item to set the screen presented each time the application is opened.</li>
+    <li><strong>Checklists</strong> Added option to change header background and text colors on individual checklist.</li>
+    <li><strong>Added</strong> Fields in &#x27;Vehicles&#x27; database table to track warrenty data.  Displayed and edited in Garage &gt; Vehicles section.  unlimited warrenties can be tracked for different components (engine, chassis, tranmission...).</li>
+    <li><strong>Added</strong> Sort descending and accending to all views and persist all choices to be restored on next view.</li>
+    <li><strong>Added</strong> Last backup date below left &#x27;Backup&#x27; menu item.</li>
+    <li><strong>Added</strong> Fields to Vehicle table to track component serial numbers.</li>
+    </ul>
+    <h3 class="rel-sec">Fixed</h3>
+    <ul class="rel-list">
+    <li>MacOS version only. Within &#x27;Vehicle Financials - Improvements&#x27;: if an entry did not have both a category and sub-category entry in the database, a crash of the application would result.  Corrected code to account for the above in MacOS code.</li>
+    <li><strong>&#x27;Vehicle Financials - Improvements&#x27;</strong> when a different vehicle is selected from the dropdown, the &#x27;+&#x27; add new record button in the menu does not respond until a current record is selected.  Corrected code.</li>
+    <li><strong>&#x27;Vehicle Financials - Improvements&#x27;</strong> when the + add new record is selected the new record should be pre-populated with the selected vehicle (if one is selected, if not leave blank). Corrected code.</li>
+    <li><strong>&#x27;Vehicle Financials - Improvements&#x27;</strong> when add record is selected, a new record is being created and added to the list, but the editadditions.swift form doea not always open with the new record. Corrected code.</li>
+    <li>All PDF report generations on MacOS would not print and raised a &#x27;not available&#x27; dialog. Corrected code.</li>
+    <li>Several forms had top menu items duplicated. Corrected code.</li>
+    <li>Corrected size of upper menu item &#x27;report&#x27; on all forms to make room for text.</li>
+    <li>Improved dashboard page cards telemetry data displays.</li>
+    <li>For service items, the name of the item will be locked after initial creation.  Since the name of the item is used to generate telemetry data, changing the name would corrupt the telemetry calculations.</li>
+    </ul>
+    <h3 class="rel-sec">Changed</h3>
+    <ul class="rel-list">
+    <li>Removed build number from version header on forms.</li>
+    <li>Removed presented graphic from several sections due to display performance.</li>
+    </ul>
+  </div>
+</details>
+<details class="release">
+  <summary><span class="rel-ver">2026-03-22</span><span class="rel-chip rel-added">5 added</span><span class="rel-chip rel-fixed">2 fixed</span></summary>
+  <div class="rel-body">
+    <h3 class="rel-sec">Added</h3>
+    <ul class="rel-list">
+    <li>Added Additions module with full CRUD operations including DisplayAdditions, EditAdditions, and PDF report generation. This module allows users to track vehicle additions and modifications with comprehensive reporting capabilities.</li>
+    <li>Added Subscriptions module with complete functionality including DisplaySubscriptions, EditSubscriptions, and PDF report generation. Users can now manage recurring vehicle-related subscriptions and expenses with detailed tracking and reporting.</li>
+    <li>Added Projects module with DisplayProjectList, EditProjectList, and dual PDF reporting (ProjectList and PunchList reports). The LivePunchListView provides real-time project tracking, enabling users to manage vehicle-related projects and punch lists efficiently.</li>
+    <li>Added CheckLists module with DisplayCheckList, LiveCheckListView, and PDF report generation for checklist items. This feature enables users to create, track, and complete vehicle maintenance and inspection checklists with live updates and comprehensive reporting.</li>
+    <li><strong>**NEW</strong> Sub-Items Feature for CheckLists** - Major enhancement to the CheckLists module with hierarchical task management:</li>
+    </ul>
+    <h3 class="rel-sec">Fixed</h3>
+    <ul class="rel-list">
+    <li>Added close button to MacOS changelog display.</li>
+    <li>Fixed SwiftData compatibility issue with PersistentIdentifier storage by implementing UUID-based parent-child relationships for sub-items</li>
+    </ul>
+    <h3 class="rel-sec">Changed</h3>
+    <ul class="rel-list">
+    <li>Updated CheckListItem model to support hierarchical relationships using itemID and parentItemUUID properties</li>
+    <li>Enhanced LiveCheckListView with sub-items display and management capabilities</li>
+    </ul>
+    <h3 class="rel-sec">Notes</h3>
+    <ul class="rel-list">
+    <li>Sub-items feature uses UUID-based relationships for SwiftData compatibility and CloudKit sync support</li>
+    </ul>
+  </div>
+</details>
+<details class="release">
+  <summary><span class="rel-ver">2025-12-22</span><span class="rel-chip rel-added">2 added</span></summary>
+  <div class="rel-body">
+    <h3 class="rel-sec">Added</h3>
+    <ul class="rel-list">
+    <li>Added dialogs to Fuel Log, Trip Log, Service Records and Service Items that displays if &#x27;All Vehicles&#x27; is selected and a new record is created.</li>
+    <li>Added this change log to be displayed once with each new version.</li>
+    </ul>
+  </div>
+</details>
+<details class="release">
+  <summary><span class="rel-ver">2025-12-22</span><span class="rel-chip rel-added">4 added</span></summary>
+  <div class="rel-body">
+    <h3 class="rel-sec">Added</h3>
+    <ul class="rel-list">
+    <li>Initial release of VehicleTrax.</li>
+    <li>SwiftData model container with CloudKit sync and local fallback.</li>
+    <li>macOS Help window and custom Help menu command.</li>
+    <li>Settings presented as a sheet from the main UI.</li>
+    </ul>
+  </div>
+</details>
+    <p class="rel-foot">Found something broken, or want a feature? Write to
+      <a href="mailto:info@aeronauticaltrax.com">info@aeronauticaltrax.com</a> — it reaches
+      the developer directly. Requests from owners drive most of what ships.</p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="brand-name">VehicleTrax</span>
+        <p class="brand-sub">Tucson, Arizona</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="https://apps.apple.com/us/app/vehicletrax/id6751254040">App Store</a>
+        <a href="whatsnew.html">What's new</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+    </div>
+    <p class="foot-legal">
+      &copy; 2026 AeroNauticalTrax. All rights reserved. Apple, iPhone, iPad, Mac and iCloud
+      are trademarks of Apple Inc.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
