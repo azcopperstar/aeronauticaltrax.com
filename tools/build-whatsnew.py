@@ -197,6 +197,7 @@ __RELEASES__
         <p class="brand-sub">Tucson, Arizona</p>
       </div>
       <nav class="foot-links" aria-label="Footer">
+        <a href="../index.html">All apps</a>
         <a href="https://apps.apple.com/us/app/vehicletrax/id6751254040">App Store</a>
         <a href="whatsnew.html">What's new</a>
         <a href="../support.html">Support</a>

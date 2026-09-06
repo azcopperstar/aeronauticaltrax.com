@@ -147,9 +147,11 @@ The domain is the **AeroNauticalTrax** brand hub; each product gets a folder.
 
 ```
 /                      brand hub — the three apps, shared principles
-/vehicletrax/          the VehicleTrax product page (was / until Sept 5)
-/vehicletrax/whatsnew.html   VehicleTrax release notes  (generated)
-/vehicletrax/changelog.md    VehicleTrax release notes  (source, synced from the app)
+/vehicletrax/          product page (was / until Sept 5)
+/vehicletrax/whatsnew.html   release notes  (generated)
+/vehicletrax/changelog.md    release notes  (source, synced from the app)
+/aerotrax/             product page — app in development
+/nauticaltrax/         product page — app in development
 /support.html          shared across all products
 /privacy.html          shared
 /terms.html            shared
@@ -157,11 +159,34 @@ The domain is the **AeroNauticalTrax** brand hub; each product gets a folder.
 /tools/                generators
 ```
 
-`AeroTrax` (small aircraft) and `NauticalTrax` (small/mid-size boats) are named on the hub
-and marked **In development**, with no download or purchase links and an explicit "Not yet
-available" line on each card. They stay that way until the apps are real — the site should
-never imply something is buyable before it is. When one ships, give it `/aerotrax/` with
-its own `changelog.md`, and add a generator target alongside VehicleTrax's.
+**Footers are per-location, standardised Sept 6, 2026.** Shared pages list the three
+products then the shared pages; each product page leads with "All apps" and then only what
+belongs to that product. Do not put a VehicleTrax App Store link or its release notes in
+the footer of a shared page — that was a leftover from the single-product site.
+
+**`vehicletrax/whatsnew.html` is generated**, footer included. Change a footer there and
+`tools/build-whatsnew.py` must change with it, or the next changelog sync reverts it.
+
+`AeroTrax` and `NauticalTrax` have full product pages as of Sept 6, 2026, linked from the
+hub and in the sitemap. **Neither app exists yet**, so each page carries three separate
+signals: an "In development" chip in the masthead, a "Not yet available" banner across the
+top of the page, and a pricing section that states nothing is on sale. The hub cards link
+with "What it will do" rather than a download verb. Keep all of that until each app ships —
+the site must never imply something is buyable before it is.
+
+Each product page also carries a **"What this is not" disclaimer** under Pricing. Those are
+not decoration: the pages make regulatory-adjacent claims (an FAA-style pilot logbook, sea
+service toward a Merchant Mariner Credential), so the caveat belongs where the claim is
+made, not only in the App Store description. Review that wording before launch.
+
+The two new pages describe features that are planned, not shipped. Before either launches,
+re-read them against what the first build actually does and cut anything that did not make
+it. The hero panels use plausible sample intervals (transponder/static 24 months, 100-hour,
+annual; zincs 6 months, impeller 250 hrs, bottom paint 24 months) — JP should confirm those
+are right, since wrong figures lose exactly the readers these pages are for.
+
+When one ships, give it its own `changelog.md` and a generator target alongside
+VehicleTrax's.
 
 Legal and support pages are deliberately SHARED. That holds only while all products
 collect no data and sync via iCloud. The moment one of them differs, split them per

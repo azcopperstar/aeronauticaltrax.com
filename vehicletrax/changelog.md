@@ -111,6 +111,10 @@ ADDED
 ## PDF Reports
 - Reports were redesigned: with a consistent portrait layout, combined data categories, an in-report vehicle picker, and a totals summary specific to each report's own data.
 
+## Data Export
+- New "Export CSV" button on every report screen: produces a full spreadsheet of every field behind that report — not just what's shown on the PDF — including resolved names like a vehicle's display name instead of its raw ID.
+- You choose where the file goes: CSV export uses the system save/share sheet instead of a fixed folder, so it can go straight to Files, Mail, or any other app.
+
 FIXED
 
 ## Vehicles
