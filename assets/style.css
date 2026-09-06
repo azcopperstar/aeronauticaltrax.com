@@ -531,3 +531,46 @@
   padding-bottom: .5rem; border-bottom: 1px solid var(--line);
 }
 .principle p { margin-top: .7rem; font-size: .93rem; color: var(--ink-2); max-width: 42ch; }
+
+/* ---------- in-development product pages ---------- */
+.dev-banner {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-2);
+}
+.dev-banner .wrap {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .9rem;
+  padding-top: .95rem; padding-bottom: .95rem;
+}
+.dev-tag {
+  font-family: var(--mono); font-size: .68rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--accent-text);
+  border: 1px solid var(--accent); border-radius: 999px;
+  padding: .22rem .6rem; white-space: nowrap;
+}
+.dev-banner p { font-size: .92rem; color: var(--ink-2); margin: 0; }
+
+.shared-list { columns: 2; column-gap: 2.5rem; margin-top: 1.8rem; max-width: 62em; }
+@media (max-width: 640px) { .shared-list { columns: 1; } }
+.shared-list li {
+  break-inside: avoid; position: relative; padding-left: 1.15rem;
+  margin-bottom: .6rem; font-size: .93rem; color: var(--ink-2);
+}
+.shared-list li::before {
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--line-strong);
+}
+.shared-list strong { color: var(--ink); font-weight: 600; }
+
+.disclaim {
+  margin-top: 2.5rem; padding: 1.25rem 1.4rem;
+  border: 1px solid var(--line); border-left: 3px solid var(--line-strong);
+  border-radius: 10px; background: var(--surface-2);
+  max-width: 58em;
+}
+.disclaim h3 {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .11em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.disclaim p { margin-top: .7rem; font-size: .92rem; color: var(--ink-2); }

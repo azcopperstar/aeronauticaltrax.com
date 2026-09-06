@@ -114,6 +114,33 @@ Web images are WebP: 640px wide for the phones, 1280px for the Mac.
 
 ---
 
+### App Store names (settled Sept 6, 2026)
+
+| App | Name (30 cap) | Subtitle (30 cap) |
+|---|---|---|
+| Vehicle | `VehicleTrax Logbook` (19) | `Service, fuel, parts and costs` (30) |
+| Aero | `AeroTrax Logbook` (16) | `Airframe, engine, pilot time` (28) |
+| Nautical | `NauticalTrax Logbook` (20) | `Boat upkeep and sea service` (27) |
+
+**"Logbook" is the umbrella word on purpose.** A logbook records operations, not just
+repairs — voyages, hours, fuel, work done, who was aboard — which is the actual feature
+set. It is also domain-native to aviation and marine, where AeroTrax and NauticalTrax
+track operator time toward credentials. "Maintenance" was rejected as too narrow;
+"Records" as unsearchable and filing-cabinet.
+
+The Subtitle field is ALSO indexed for App Store search, so the domain keywords live
+there rather than being crammed into the name.
+
+Two things to remember:
+
+- `CFBundleDisplayName` is a separate field and controls the home-screen icon label,
+  which truncates near 12 characters. Keep it at `VehicleTrax` / `AeroTrax` /
+  `NauticalTrax` — the longer store name costs nothing where users look daily.
+- VehicleTrax is already live as plain `VehicleTrax`. A name change is staged metadata:
+  it goes live with the next version release, not on save.
+
+---
+
 ### Site structure (restructured Sept 5, 2026)
 
 The domain is the **AeroNauticalTrax** brand hub; each product gets a folder.
