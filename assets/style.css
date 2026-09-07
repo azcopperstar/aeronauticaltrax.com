@@ -485,6 +485,16 @@
 }
 
 /* ---------- brand hub (index.html) ---------- */
+.brandmark {
+  display: block;
+  width: 100%; max-width: 420px; height: auto;
+  margin-bottom: clamp(1.5rem, 3vw, 2.2rem);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+@media (max-width: 560px) { .brandmark { max-width: 300px; } }
+
 .hub-hero { max-width: 46em; }
 .hub-hero h1 {
   font-family: var(--display); font-weight: 800; letter-spacing: -.025em;
