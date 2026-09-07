@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AeroTrax — aircraft records and pilot logbook</title>
-<meta name="description" content="AeroTrax keeps aircraft maintenance, AD compliance, inspection cycles and component times alongside your FAA-style pilot logbook. iPhone, iPad and Mac. In development.">
+<meta name="description" content="AeroTrax keeps aircraft maintenance, AD compliance, inspection cycles, part traceability and component times alongside your FAA-style pilot logbook. iPhone, iPad and Mac. In development.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AeroNauticalTrax">
 <meta property="og:title" content="AeroTrax — aircraft records and pilot logbook">
-<meta property="og:description" content="Airworthiness directives, inspection cycles and component times on one side; PIC, currency and ratings on the other. In development.">
+<meta property="og:description" content="Airworthiness directives, inspection cycles, part traceability and component times on one side; PIC, currency and ratings on the other. In development.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://aeronauticaltrax.com/aerotrax/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,7 @@
     </a>
     <nav class="mast-nav" aria-label="Primary">
       <a class="opt" href="index.html#tracks">The aircraft</a>
+      <a class="opt" href="index.html#parts">The parts</a>
       <a class="opt" href="index.html#logbook">The pilot</a>
       <a class="opt" href="index.html#pricing">Pricing</a>
       <a class="opt" href="../support.html">Support</a>
@@ -44,9 +45,7 @@
     <div class="wrap">
       <span class="dev-tag">Not yet available</span>
       <p>AeroTrax is in development. There is nothing to download or buy yet — this page
-      describes what it is being built to do. <a href="../vehicletrax/index.html">VehicleTrax</a>
-        <a href="../aerotrax/index.html">AeroTrax</a>
-        <a href="../nauticaltrax/index.html">NauticalTrax</a>,
+      describes what it is being built to do. <a href="../vehicletrax/index.html">VehicleTrax</a>,
       built on the same engine, is shipping today.</p>
     </div>
   </div>
@@ -113,7 +112,7 @@
       <dl class="specs">
         <div class="spec">
           <dt>Airworthiness</dt>
-          <dd>ADs, inspection cycles and component times, each on its own schedule.</dd>
+          <dd>ADs, inspection cycles, part life limits and component times, each on its own schedule.</dd>
         </div>
         <div class="spec">
           <dt>Logbook</dt>
@@ -175,6 +174,132 @@
           <p>ADs, inspection status and component times in a single document — the one you hand over when someone asks.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="parts">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The parts</p>
+        <h2>Every part, and the paper that proves it.</h2>
+        <p>A part is only airworthy if you can show where it came from. AeroTrax keeps the
+        8130-3, the approval basis and the trace back to the source on the part record
+        itself &mdash; next to the hours, the cycles and the life limit. When someone asks you
+        to prove it, the answer is a tap rather than an afternoon in a filing cabinet.</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">Fuel pump &middot; P/N 1B24-1</span>
+          <span class="panel-odo">S/N 4471C &middot; 612.4 TSN</span>
+        </div>
+        <ul class="due-list">
+          <li>
+            <span class="due-item">FAA Form 8130-3</span>
+            <span class="due-interval">PMA &middot; released 03/2024</span>
+            <span class="pill pill-ok">on file</span>
+          </li>
+          <li>
+            <span class="due-item">AD 2023-11-04 (recurring)</span>
+            <span class="due-interval">every 500 hrs &middot; 412.0 hrs since</span>
+            <span class="pill pill-warn">88.0 hrs left</span>
+          </li>
+          <li>
+            <span class="due-item">Overhaul</span>
+            <span class="due-interval">1,000 hr manufacturer TBO</span>
+            <span class="pill pill-ok">387.6 hrs left</span>
+          </li>
+          <li>
+            <span class="due-item">Installed</span>
+            <span class="due-interval">N412WB &middot; accessory case &middot; 03/14/2024</span>
+            <span class="pill pill-ok">18 months</span>
+          </li>
+          <li>
+            <span class="due-item">Warranty</span>
+            <span class="due-interval">24 months from installation</span>
+            <span class="pill pill-crit">expired</span>
+          </li>
+        </ul>
+        <div class="panel-foot">Sample data &middot; part hours derived from aircraft time at installation</div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Approval tags on file</h3>
+          <p>The FAA Form 8130-3, EASA Form 1 or Certificate of Conformity attached to the
+          part record itself, photographed or imported &mdash; so the paperwork travels with the
+          part instead of living in a shoebox.</p>
+        </div>
+        <div class="feature">
+          <h3>Approval basis</h3>
+          <p>OEM, PMA, TSO article, approved under an STC, owner-produced, or standard
+          AN/MS/NAS hardware. Recorded as a field of its own, because it is the difference
+          between a part you may install and one you may not.</p>
+        </div>
+        <div class="feature">
+          <h3>Source traceability</h3>
+          <p>The chain back to the production approval holder, vendor by vendor. The record a
+          pre-purchase inspection asks for first, and the one that keeps a suspected
+          unapproved part out of your airplane.</p>
+        </div>
+        <div class="feature">
+          <h3>Part numbers that change</h3>
+          <p>Supersession tracked, so a revised dash number links back to the part it
+          replaces. Alternates and interchangeables, lot and batch numbers for parts that
+          carry no serial, and an ATA chapter on everything.</p>
+        </div>
+        <div class="feature">
+          <h3>Life limits kept separate from TBO</h3>
+          <p>A life limit is a discard. A TBO is a manufacturer&rsquo;s recommendation. An
+          inspection interval is neither. All three are modeled separately rather than
+          flattened into one due date that hides which is which.</p>
+        </div>
+        <div class="feature">
+          <h3>Hours, cycles and calendar</h3>
+          <p>Time since new, overhaul, repair and inspection, plus cycles for the parts that
+          count landings rather than hours &mdash; each running against the clock it actually
+          accrues on, Hobbs or tach or air time.</p>
+        </div>
+        <div class="feature">
+          <h3>Derived, not typed twice</h3>
+          <p>A part&rsquo;s time is computed from the aircraft time recorded at installation, so
+          it stays correct on its own. Nothing to keep in step by hand, and nothing to drift
+          the first time an entry is missed.</p>
+        </div>
+        <div class="feature">
+          <h3>Directives that follow the part</h3>
+          <p>Many airworthiness directives are issued against a part number, not an airframe.
+          Linking them to the part means a recurring AD cannot go quiet when a component moves
+          to another aircraft.</p>
+        </div>
+        <div class="feature">
+          <h3>Condition and shelf life</h3>
+          <p>New, overhauled, repaired, serviceable, as-removed or scrap &mdash; with cure dates and
+          expiry for hoses, seals, tires, batteries and oxygen. A part can be new in the box
+          and still not airworthy.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>The records 14 CFR 91.417 says must stay with the aircraft &mdash; total time in
+        service, the current status of life-limited parts, time since overhaul, inspection
+        status and AD status &mdash; come out of AeroTrax as one report. It is also the first
+        thing a buyer&rsquo;s mechanic asks for.</p>
+      </div>
+
+      <h3 class="eyebrow list-label">Also on every part record</h3>
+      <ul class="shared-list">
+        <li><strong>Installed position</strong> &mdash; engine number, gear leg, cylinder, with its next higher assembly</li>
+        <li><strong>Removal reason</strong> &mdash; scheduled, unscheduled, convenience, or robbed for another aircraft</li>
+        <li><strong>Manufacturer and CAGE code</strong>, with NSN for ex-military stock</li>
+        <li><strong>Rotable, repairable, expendable or consumable</strong> classification</li>
+        <li><strong>Cost, vendor, purchase order and invoice</strong></li>
+        <li><strong>Warranty</strong> tracked by both calendar date and hours</li>
+        <li><strong>Core returns and exchanges</strong>, with the deadline the core is due back</li>
+        <li><strong>Quantity and unit of measure</strong> &mdash; each, feet, or quarts</li>
+        <li><strong>Storage location</strong> and quarantine status</li>
+        <li><strong>Attached documents and photos</strong> on any part or event</li>
+      </ul>
     </div>
   </section>
 

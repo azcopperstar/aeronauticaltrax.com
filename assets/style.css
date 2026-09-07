@@ -562,6 +562,7 @@
   width: 5px; height: 5px; border-radius: 50%; background: var(--line-strong);
 }
 .shared-list strong { color: var(--ink); font-weight: 600; }
+.list-label { margin-top: 2.6rem; }
 
 .disclaim {
   margin-top: 2.5rem; padding: 1.25rem 1.4rem;
