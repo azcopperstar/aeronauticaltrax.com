@@ -585,3 +585,11 @@
   text-transform: uppercase; color: var(--ink-3);
 }
 .disclaim p { margin-top: .7rem; font-size: .92rem; color: var(--ink-2); }
+
+/* ---------- origin mark ---------- */
+.h3-flag { display: flex; align-items: center; gap: .55rem; }
+.h3-flag .flag {
+  flex: none; display: block;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+}
