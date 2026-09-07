@@ -460,6 +460,16 @@ Use a server, not `open index.html` — file:// URLs behave differently.
 
 ## Gotchas that already bit once
 
+**`overflow-x: hidden` on `body` silently breaks `position: sticky`.** It makes `body` a
+scroll container, so a sticky masthead resolves against that box instead of the viewport and
+simply never pins — with no error anywhere. The masthead was made sticky on Sept 7, 2026 and
+this had to be changed to `overflow-x: clip`, which still prevents sideways scroll but does
+not create a scroll container. Do not change it back to `hidden`.
+
+**A pinned masthead swallows anchor targets.** `html { scroll-padding-top: 5.25rem }` keeps
+`#pricing` and friends clear of the ~69px bar. If the header height changes, change that too.
+
+
 - **Use relative links** (`assets/style.css`, `privacy.html`), never absolute (`/assets/...`).
   Absolute paths break on the `github.io` test URL, where the site sits in a subfolder.
 - **`CNAME` is GitHub's file.** It gets created and updated when the custom domain is set in

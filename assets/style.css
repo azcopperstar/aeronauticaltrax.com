@@ -75,7 +75,7 @@
 
   /* ---------- reset ---------- */
   *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5.25rem; }
   body {
     margin: 0;
     background: var(--ground);
@@ -84,7 +84,8 @@
     font-size: 1.0625rem;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    /* clip, not hidden: hidden makes body a scroll container and breaks position:sticky */
+    overflow-x: clip;
   }
   img { max-width: 100%; display: block; }
   [hidden] { display: none !important; }
@@ -114,6 +115,9 @@
 
   /* ---------- masthead ---------- */
   .masthead {
+    position: sticky;
+    top: 0;
+    z-index: 50;
     border-bottom: 1px solid var(--line);
     background: var(--ground);
   }
