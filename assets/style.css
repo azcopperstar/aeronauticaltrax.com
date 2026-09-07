@@ -574,6 +574,32 @@
 .shared-list strong { color: var(--ink); font-weight: 600; }
 .list-label { margin-top: 2.6rem; }
 .features-tight { margin-top: 1.4rem; }
+/* four-up pillar grid (overview page) */
+@media (min-width: 860px) { .apps-4 { grid-template-columns: repeat(2, 1fr); } }
+
+/* collapsible reference list */
+.reveal { margin-top: 2.6rem; border-top: 1px solid var(--line); padding-top: 1.15rem; }
+.reveal > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+}
+.reveal > summary::-webkit-details-marker { display: none; }
+.reveal > summary::after {
+  content: "";
+  width: 6px; height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  margin-top: -4px;
+  transition: transform .18s ease, margin-top .18s ease;
+}
+.reveal[open] > summary::after { transform: rotate(-135deg); margin-top: 2px; }
+.reveal > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+.reveal .shared-list { margin-top: 1.3rem; }
+
 
 .disclaim {
   margin-top: 2.5rem; padding: 1.25rem 1.4rem;

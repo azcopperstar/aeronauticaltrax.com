@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aircraft fuel tracking &mdash; AeroTrax</title>
+<meta name="description" content="Fuel is the biggest variable cost an airplane has, and the one most often recorded as a single dollar figure that answers nothing later. AeroTrax records…">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AeroNauticalTrax">
+<meta property="og:title" content="Aircraft fuel tracking &mdash; AeroTrax">
+<meta property="og:description" content="Fuel is the biggest variable cost an airplane has, and the one most often recorded as a single dollar figure that answers nothing later. AeroTrax records…">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://aeronauticaltrax.com/aerotrax/fuel/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="icon" href="../../assets/icons/aerotrax-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../../assets/icons/aerotrax-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="../../assets/icons/aerotrax-180.png">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">
+      <img class="brand-mark" src="../../assets/icons/aerotrax-mark-60.webp" width="30" height="30" alt="" aria-hidden="true" decoding="async">
+      <span>
+        <span class="brand-name">AeroTrax</span>
+        <span class="brand-sub">by AeroNauticalTrax</span>
+      </span>
+    </a>
+    <nav class="mast-nav" aria-label="Primary">
+      <a class="opt" href="../aircraft/index.html">The aircraft</a>
+      <a class="opt" href="../parts/index.html">The parts</a>
+      <a class="opt" href="../fuel/index.html" aria-current="page">The fuel</a>
+      <a class="opt" href="../pilot/index.html">The pilot</a>
+      <a class="opt" href="../index.html#pricing">Pricing</a>
+      <a class="opt" href="../../support.html">Support</a>
+      <span class="app-status app-status-dev">In development</span>
+    </nav>
+  </div>
+</header>
+<main id="top">
+
+  <div class="dev-banner">
+    <div class="wrap">
+      <span class="dev-tag">Not yet available</span>
+      <p>AeroTrax is in development. There is nothing to download or buy yet &mdash; this page
+      describes what it is being built to do. <a href="../../vehicletrax/index.html">VehicleTrax</a>,
+      built on the same engine, is shipping today.</p>
+    </div>
+  </div>
+
+  <div class="wrap page-head">
+    <p class="eyebrow">The fuel</p>
+    <h1>The largest number you spend, logged like it matters.</h1>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p>Fuel is the biggest variable cost an airplane has, and the one most often recorded
+        as a single dollar figure that answers nothing later. AeroTrax records the uplift, the
+        units, the density and the whole invoice &mdash; so burn, economy and what a stop actually
+        cost are figures that fall out rather than ones you reconstruct.</p>
+      </div>
+
+            <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">N412WB &middot; KTUS &middot; Signature</span>
+          <span class="panel-odo">12 Aug 2026 &middot; 1,842.6 Hobbs</span>
+        </div>
+        <ul class="due-list">
+          <li>
+            <span class="due-item">Uplift</span>
+            <span class="due-interval">55.2 gal &middot; 100LL &middot; full, both tanks</span>
+            <span class="pill pill-ok">331.2 lb</span>
+          </li>
+          <li>
+            <span class="due-item">Burn since last fill</span>
+            <span class="due-interval">55.2 gal over 4.1 hrs</span>
+            <span class="pill pill-ok">13.5 gal/hr</span>
+          </li>
+          <li>
+            <span class="due-item">Planned vs actual</span>
+            <span class="due-interval">planned 52.0 gal</span>
+            <span class="pill pill-warn">+3.2 gal</span>
+          </li>
+          <li>
+            <span class="due-item">Price</span>
+            <span class="due-interval">$6.85/gal posted &middot; $6.12 contract</span>
+            <span class="pill pill-ok">saved $40.30</span>
+          </li>
+          <li>
+            <span class="due-item">Ramp fee</span>
+            <span class="due-interval">waived at 50 gal minimum</span>
+            <span class="pill pill-ok">waived</span>
+          </li>
+        </ul>
+        <div class="panel-foot">Sample data &middot; burn computed between known-full fills</div>
+      </div>
+
+      <h3 class="eyebrow list-label">Every airplane</h3>
+      <div class="features features-tight">
+        <div class="feature">
+          <h3>The uplift itself</h3>
+          <p>Gallons, liters, pounds or kilograms &mdash; recorded in the unit it was actually sold
+          in, with fuel on board before and after, and which tanks took it.</p>
+        </div>
+        <div class="feature">
+          <h3>Density, not a guess</h3>
+          <p>The specific gravity the FBO billed at, stored with the ticket. Jet A is nominally
+          6.7 lb/gal and rarely exactly that, and the gap is both money and a weight-and-balance
+          error.</p>
+        </div>
+        <div class="feature">
+          <h3>Full or partial, flagged</h3>
+          <p>Whether a fill topped the tanks off. Every economy figure in the app rests on it,
+          and it cannot be reconstructed later &mdash; so AeroTrax asks once and gets the burn
+          right.</p>
+        </div>
+        <div class="feature">
+          <h3>Burn per hour, computed</h3>
+          <p>Gallons or pounds per hour derived between known-full fills, per leg and rolling.
+          Not a number you maintain &mdash; one that falls out of the flights and fills you already
+          logged.</p>
+        </div>
+        <div class="feature">
+          <h3>Planned against actual</h3>
+          <p>The variance, which is the figure that means something. An absolute burn tells you
+          the airplane is normal; the drift from plan tells you something changed.</p>
+        </div>
+        <div class="feature">
+          <h3>Price by airport, over time</h3>
+          <p>What you paid where, trending. Enough to plan a route around fuel, or to notice
+          the field twelve miles away has been ninety cents cheaper all year.</p>
+        </div>
+      </div>
+
+      <h3 class="eyebrow list-label">When it is a turbine</h3>
+      <div class="features features-tight">
+        <div class="feature">
+          <h3>The whole invoice</h3>
+          <p>Flowage, into-plane, ramp, handling, overnight, GPU and after-hours callout, each
+          on its own line. The fuel price is rarely what the stop actually cost.</p>
+        </div>
+        <div class="feature">
+          <h3>Contract fuel and releases</h3>
+          <p>The release number, the contract price and the posted price side by side &mdash; so the
+          savings your fuel program produced is a figure you can show rather than assume.</p>
+        </div>
+        <div class="feature">
+          <h3>Waiver thresholds</h3>
+          <p>The uplift minimum that waives the ramp fee, and whether you cleared it. Taking on
+          180 gallons and paying a $450 ramp fee is the sort of thing you fix once you can see
+          it.</p>
+        </div>
+        <div class="feature">
+          <h3>Tankering, answered</h3>
+          <p>Whether carrying cheap fuel from the departure field actually paid once the burn
+          penalty of carrying the weight is counted. The calculation every flight department
+          does in a spreadsheet.</p>
+        </div>
+        <div class="feature">
+          <h3>SAF blend and certificates</h3>
+          <p>Blend percentage, batch reference and the certificate behind it &mdash; the paper trail
+          that emissions reporting and book-and-claim both ask for.</p>
+        </div>
+        <div class="feature">
+          <h3>Trips, cost centers and billing</h3>
+          <p>Which leg, which trip, which cost center, and whether the leg was flown under Part
+          91 or Part 135 &mdash; because that decides the tax treatment and whether the fuel is
+          billable to someone else.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>Fuel weight comes from the density actually recorded, not a table constant &mdash; so the
+        number reaching weight and balance is the number you were billed for. On a jet taking
+        on eight thousand pounds, the difference between assumed and actual density is not a
+        rounding error.</p>
+      </div>
+
+      <details class="reveal" open>
+        <summary class="eyebrow">Also on every fuel record</summary>
+        <ul class="shared-list">
+        <li><strong>Airport and FBO</strong> kept apart, because three FBOs on one field rarely agree on price</li>
+        <li><strong>Supplier and brand</strong>, tracked separately from whoever pumped it</li>
+        <li><strong>Ticket and invoice number</strong>, truck number and line technician</li>
+        <li><strong>Service type</strong> &mdash; self-serve, full-serve, truck or single-point pressure refueling</li>
+        <li><strong>Taxes broken out</strong> &mdash; federal excise, state, local and sales</li>
+        <li><strong>Currency and exchange rate</strong>, with VAT flagged where it is reclaimable</li>
+        <li><strong>Payment method</strong> &mdash; fuel card, credit card or direct bill</li>
+        <li><strong>Additives</strong> &mdash; FSII concentration, biocide and static dissipator</li>
+        <li><strong>Sump and water check</strong> performed, with the result</li>
+        <li><strong>Photo of the fuel ticket</strong> attached to the record</li>
+      </ul>
+      </details>
+    
+    </div>
+  </section>
+
+  <section class="section" id="more">
+    <div class="wrap">
+      <h3 class="eyebrow">Keep reading</h3>
+      <div class="apps">
+        <article class="app-card">
+          <div class="app-head">
+            <div class="app-headtext">
+              <h3>The aircraft</h3>
+            </div>
+          </div>
+          <p class="app-for">What an airplane actually needs tracked.</p>
+          <p class="app-desc">Hobbs and tach time, airworthiness directives, inspection cycles and component times &mdash; each on its own clock, calendar or hours.</p>
+          <div class="app-actions">
+            <a class="btn btn-ghost" href="../aircraft/index.html">See how it works</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-head">
+            <div class="app-headtext">
+              <h3>The parts</h3>
+            </div>
+          </div>
+          <p class="app-for">Every part, and the paper that proves it.</p>
+          <p class="app-desc">8130-3 tags, approval basis and source traceability, alongside life limits, cycles and the install history behind them.</p>
+          <div class="app-actions">
+            <a class="btn btn-ghost" href="../parts/index.html">See how it works</a>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-head">
+            <div class="app-headtext">
+              <h3>The pilot</h3>
+            </div>
+          </div>
+          <p class="app-for">Your logbook lives here too.</p>
+          <p class="app-desc">PIC, night, instrument, cross-country and landings, with currency and a flight review date calculated rather than remembered.</p>
+          <div class="app-actions">
+            <a class="btn btn-ghost" href="../pilot/index.html">See how it works</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="brand-name">AeroNauticalTrax</span>
+        <p class="brand-sub">Tucson, Arizona</p>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../../index.html">All apps</a>
+        <a href="../../vehicletrax/index.html">VehicleTrax</a>
+        <a href="../../aerotrax/index.html">AeroTrax</a>
+        <a href="../../nauticaltrax/index.html">NauticalTrax</a>
+        <a href="../../support.html">Support</a>
+        <a href="../../privacy.html">Privacy Policy</a>
+        <a href="../../terms.html">Terms of Use</a>
+      </nav>
+    </div>
+    <p class="foot-legal">
+      &copy; 2026 AeroNauticalTrax. All rights reserved. Apple, iPhone, iPad, Mac and iCloud
+      are trademarks of Apple Inc.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

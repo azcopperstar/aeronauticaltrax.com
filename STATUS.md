@@ -226,14 +226,48 @@ The domain is the **AeroNauticalTrax** brand hub; each product gets a folder.
 /vehicletrax/          product page (was / until Sept 5)
 /vehicletrax/whatsnew.html   release notes  (generated)
 /vehicletrax/changelog.md    release notes  (source, synced from the app)
-/aerotrax/             product page — app in development
-/nauticaltrax/         product page — app in development
+/aerotrax/             product overview — app in development
+/aerotrax/aircraft/    pillar page — maintenance, ADs, inspection cycles, component times
+/aerotrax/parts/       pillar page — traceability, approval basis, life limits
+/aerotrax/fuel/        pillar page — uplift, density, invoice, burn, tankering
+/aerotrax/pilot/       pillar page — flight logbook, currency, certificates
+/nauticaltrax/         product overview — app in development
+/nauticaltrax/vessel/  pillar page — engine hours, haul-out cycle
+/nauticaltrax/sea-service/  pillar page — days underway toward a credential
 /support.html          shared across all products
 /privacy.html          shared
 /terms.html            shared
 /assets/               shared styles, icons, screenshots
 /tools/                generators
 ```
+
+**Product pages are split into an overview plus one pillar page each (Sept 7, 2026).**
+The overview carries the hero, spec strip, a "What it tracks" card grid linking to each
+pillar, the shared-engine list and pricing. Each pillar page carries that pillar's full
+depth, and ends with a "Keep reading" row linking the others. The masthead nav is the
+pillar list. Reasons: each page targets its own search query instead of one page competing
+with itself; depth becomes linkable; and the nav stopped crowding.
+
+**`tools/split-product-pages.py` performed the migration and is NOT re-runnable as-is.**
+It reads a *pre-split* product `index.html` (one page with `#tracks`, `#parts`, … sections),
+extracts the hero, spec strip, pillar sections, shared-engine and pricing blocks, and writes
+the overview plus every pillar page. Running it again after the split fails with
+`AssertionError: tracks`, because the overview it produced no longer contains those sections.
+To re-run it you must first restore the pre-split page:
+`git show <commit>:aerotrax/index.html > aerotrax/index.html`. Note `git checkout -- <file>`
+fails on this machine ("Operation not permitted") because the sandbox cannot unlink; the
+`git show >` redirect writes in place and works.
+
+**Day to day, edit the pillar pages directly.** To add a new pillar, copy an existing pillar
+page, add it to the `PRODUCTS` config in the tool (for the record), add its card to the
+overview's `#explore` grid, add it to the masthead nav on every page of that product, and add
+its URL to `sitemap.xml`. Relative-path depth is `../` on an overview and `../../` on a pillar
+page — getting this wrong is the easiest way to break the stylesheet link.
+
+**Reference lists use `<details class="reveal" open>`, defaulted OPEN.** Safari still does
+not auto-expand `<details>` for find-in-page (Chrome/Edge do since 2022, Firefox since v148
+in Feb 2026), and this audience is Apple-heavy. Collapsing by default would hide content from
+Cmd-F. Keep them open.
 
 **Footers are per-location, standardised Sept 6, 2026.** Shared pages list the three
 products then the shared pages; each product page leads with "All apps" and then only what
