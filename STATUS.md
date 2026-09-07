@@ -177,9 +177,12 @@ instruments also lives outside the repo — ask before assuming either is availa
 
 | App | Name (30 cap) | Subtitle (30 cap) |
 |---|---|---|
-| Vehicle | `VehicleTrax Logbook` (19) | `Service, fuel, parts and costs` (30) |
-| Aero | `AeroTrax Logbook` (16) | `Airframe, engine, pilot time` (28) |
-| Nautical | `NauticalTrax Logbook` (20) | `Boat upkeep and sea service` (27) |
+| Vehicle | `VehicleTrax Complete Logbook` (28) | `Service, fuel, parts and costs` (30) |
+| Aero | `AeroTrax Complete Logbook` (25) | `Airframe, engine, pilot time` (28) |
+| Nautical | `NauticalTrax Complete Logbook` (29) | `Boat upkeep and sea service` (27) |
+
+**"Complete" was added Sept 7, 2026.** All three still fit the 30-character cap, with one
+character to spare on NauticalTrax — any further addition will not fit.
 
 **"Logbook" is the umbrella word on purpose.** A logbook records operations, not just
 repairs — voyages, hours, fuel, work done, who was aboard — which is the actual feature
@@ -189,6 +192,20 @@ track operator time toward credentials. "Maintenance" was rejected as too narrow
 
 The Subtitle field is ALSO indexed for App Store search, so the domain keywords live
 there rather than being crammed into the name.
+
+**Where the verbose name is allowed on the site (decided Sept 7, 2026):** page `<title>`,
+`og:title` and both meta descriptions ONLY. Never in mastheads, `<h1>`s, card titles or
+body copy — those keep the short product name, which is what the app itself, the home
+screen and customers all call it. Store names change; keeping them in three files rather
+than dozens is deliberate.
+
+`vehicletrax/whatsnew.html` is generated — its title lives in `tools/build-whatsnew.py`
+and must be changed there too.
+
+**Watch this one:** the store name now says "Complete" while the trial caps you at 2
+vehicles and 10 records per table. "Complete" describes the product's scope, not the
+trial's state, but a buyer can read it the other way. Make sure the subtitle and
+description make "free to try" unmistakable.
 
 Two things to remember:
 

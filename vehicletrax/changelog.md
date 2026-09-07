@@ -28,6 +28,8 @@ ADDED
 - Remaining inventory is now shown next to the part: on the Parts list, on Service Items, and on the service record that consumed it, with a low-stock warning once quantity on hand falls to or below the reorder point.
 
 ## Fuel Log
+- Fuel Type picker overhauled: replaces the old fixed Gasoline/Diesel/EV/Hybrid list with a worldwide catalog of gasoline grades, ethanol blends, diesel grades, biodiesel/renewable diesel, gaseous fuels, EV charging types, and specialty/historic fuels, grouped by category.
+- DEF fields now key off fuel family, not an exact match: DEF/AdBlue tracking appears for any diesel-family fuel type, not just the literal "Diesel" tag, so it keeps working now that diesel is split into several grades.
 - Field to track DEF price per gallon: DEF remaining in 1/8 increments
 - Exit Time field added below Date/Time: so a fuel log records both arrival and departure the same way a travel log's enroute stop does.
 - Edit form is reordered to match a travel log's enroute fuel stop:
@@ -98,6 +100,7 @@ ADDED
 
 ## Settings
 - New "Fuel Log — Fluid Checks": section in Settings.
+- New "Configure Fuel Types…" screen: choose which fuel types appear in the Fuel Type picker; the selection syncs across your devices.
 
 ## Help & Feedback
 - New "Send Feedback" form: under Resources on iPhone/iPad, and in the Support section of Help on Mac. 

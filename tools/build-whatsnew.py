@@ -140,12 +140,12 @@ SHELL = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What's new — VehicleTrax</title>
+<title>What's new — VehicleTrax Complete Logbook</title>
 <meta name="description" content="Release notes for VehicleTrax on iPhone, iPad and Mac — what was added, fixed and changed in each version.">
 <meta name="apple-itunes-app" content="app-id=6751254040">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VehicleTrax">
-<meta property="og:title" content="What's new — VehicleTrax">
+<meta property="og:title" content="What's new — VehicleTrax Complete Logbook">
 <meta property="og:description" content="Release notes for VehicleTrax on iPhone, iPad and Mac — what was added, fixed and changed in each version.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
