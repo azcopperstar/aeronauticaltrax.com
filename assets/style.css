@@ -573,6 +573,7 @@
 }
 .shared-list strong { color: var(--ink); font-weight: 600; }
 .list-label { margin-top: 2.6rem; }
+.features-tight { margin-top: 1.4rem; }
 
 .disclaim {
   margin-top: 2.5rem; padding: 1.25rem 1.4rem;

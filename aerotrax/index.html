@@ -303,6 +303,149 @@
     </div>
   </section>
 
+  <section class="section" id="fuel">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The fuel</p>
+        <h2>The largest number you spend, logged like it matters.</h2>
+        <p>Fuel is the biggest variable cost an airplane has, and the one most often recorded
+        as a single dollar figure that answers nothing later. AeroTrax records the uplift, the
+        units, the density and the whole invoice &mdash; so burn, economy and what a stop actually
+        cost are figures that fall out rather than ones you reconstruct.</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">N412WB &middot; KTUS &middot; Signature</span>
+          <span class="panel-odo">12 Aug 2026 &middot; 1,842.6 Hobbs</span>
+        </div>
+        <ul class="due-list">
+          <li>
+            <span class="due-item">Uplift</span>
+            <span class="due-interval">55.2 gal &middot; 100LL &middot; full, both tanks</span>
+            <span class="pill pill-ok">331.2 lb</span>
+          </li>
+          <li>
+            <span class="due-item">Burn since last fill</span>
+            <span class="due-interval">55.2 gal over 4.1 hrs</span>
+            <span class="pill pill-ok">13.5 gal/hr</span>
+          </li>
+          <li>
+            <span class="due-item">Planned vs actual</span>
+            <span class="due-interval">planned 52.0 gal</span>
+            <span class="pill pill-warn">+3.2 gal</span>
+          </li>
+          <li>
+            <span class="due-item">Price</span>
+            <span class="due-interval">$6.85/gal posted &middot; $6.12 contract</span>
+            <span class="pill pill-ok">saved $40.30</span>
+          </li>
+          <li>
+            <span class="due-item">Ramp fee</span>
+            <span class="due-interval">waived at 50 gal minimum</span>
+            <span class="pill pill-ok">waived</span>
+          </li>
+        </ul>
+        <div class="panel-foot">Sample data &middot; burn computed between known-full fills</div>
+      </div>
+
+      <h3 class="eyebrow list-label">Every airplane</h3>
+      <div class="features features-tight">
+        <div class="feature">
+          <h3>The uplift itself</h3>
+          <p>Gallons, liters, pounds or kilograms &mdash; recorded in the unit it was actually sold
+          in, with fuel on board before and after, and which tanks took it.</p>
+        </div>
+        <div class="feature">
+          <h3>Density, not a guess</h3>
+          <p>The specific gravity the FBO billed at, stored with the ticket. Jet A is nominally
+          6.7 lb/gal and rarely exactly that, and the gap is both money and a weight-and-balance
+          error.</p>
+        </div>
+        <div class="feature">
+          <h3>Full or partial, flagged</h3>
+          <p>Whether a fill topped the tanks off. Every economy figure in the app rests on it,
+          and it cannot be reconstructed later &mdash; so AeroTrax asks once and gets the burn
+          right.</p>
+        </div>
+        <div class="feature">
+          <h3>Burn per hour, computed</h3>
+          <p>Gallons or pounds per hour derived between known-full fills, per leg and rolling.
+          Not a number you maintain &mdash; one that falls out of the flights and fills you already
+          logged.</p>
+        </div>
+        <div class="feature">
+          <h3>Planned against actual</h3>
+          <p>The variance, which is the figure that means something. An absolute burn tells you
+          the airplane is normal; the drift from plan tells you something changed.</p>
+        </div>
+        <div class="feature">
+          <h3>Price by airport, over time</h3>
+          <p>What you paid where, trending. Enough to plan a route around fuel, or to notice
+          the field twelve miles away has been ninety cents cheaper all year.</p>
+        </div>
+      </div>
+
+      <h3 class="eyebrow list-label">When it is a turbine</h3>
+      <div class="features features-tight">
+        <div class="feature">
+          <h3>The whole invoice</h3>
+          <p>Flowage, into-plane, ramp, handling, overnight, GPU and after-hours callout, each
+          on its own line. The fuel price is rarely what the stop actually cost.</p>
+        </div>
+        <div class="feature">
+          <h3>Contract fuel and releases</h3>
+          <p>The release number, the contract price and the posted price side by side &mdash; so the
+          savings your fuel program produced is a figure you can show rather than assume.</p>
+        </div>
+        <div class="feature">
+          <h3>Waiver thresholds</h3>
+          <p>The uplift minimum that waives the ramp fee, and whether you cleared it. Taking on
+          180 gallons and paying a $450 ramp fee is the sort of thing you fix once you can see
+          it.</p>
+        </div>
+        <div class="feature">
+          <h3>Tankering, answered</h3>
+          <p>Whether carrying cheap fuel from the departure field actually paid once the burn
+          penalty of carrying the weight is counted. The calculation every flight department
+          does in a spreadsheet.</p>
+        </div>
+        <div class="feature">
+          <h3>SAF blend and certificates</h3>
+          <p>Blend percentage, batch reference and the certificate behind it &mdash; the paper trail
+          that emissions reporting and book-and-claim both ask for.</p>
+        </div>
+        <div class="feature">
+          <h3>Trips, cost centers and billing</h3>
+          <p>Which leg, which trip, which cost center, and whether the leg was flown under Part
+          91 or Part 135 &mdash; because that decides the tax treatment and whether the fuel is
+          billable to someone else.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>Fuel weight comes from the density actually recorded, not a table constant &mdash; so the
+        number reaching weight and balance is the number you were billed for. On a jet taking
+        on eight thousand pounds, the difference between assumed and actual density is not a
+        rounding error.</p>
+      </div>
+
+      <h3 class="eyebrow list-label">Also on every fuel record</h3>
+      <ul class="shared-list">
+        <li><strong>Airport and FBO</strong> kept apart, because three FBOs on one field rarely agree on price</li>
+        <li><strong>Supplier and brand</strong>, tracked separately from whoever pumped it</li>
+        <li><strong>Ticket and invoice number</strong>, truck number and line technician</li>
+        <li><strong>Service type</strong> &mdash; self-serve, full-serve, truck or single-point pressure refueling</li>
+        <li><strong>Taxes broken out</strong> &mdash; federal excise, state, local and sales</li>
+        <li><strong>Currency and exchange rate</strong>, with VAT flagged where it is reclaimable</li>
+        <li><strong>Payment method</strong> &mdash; fuel card, credit card or direct bill</li>
+        <li><strong>Additives</strong> &mdash; FSII concentration, biocide and static dissipator</li>
+        <li><strong>Sump and water check</strong> performed, with the result</li>
+        <li><strong>Photo of the fuel ticket</strong> attached to the record</li>
+      </ul>
+    </div>
+  </section>
+
   <section class="section" id="logbook">
     <div class="wrap">
       <div class="section-head">
