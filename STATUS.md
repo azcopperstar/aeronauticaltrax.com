@@ -150,6 +150,29 @@ next version, or revert the site — do not leave them apart for long.
 
 ---
 
+### Brand logo (Sept 7, 2026)
+
+`assets/logo.webp` — chart background, the three brass instruments overlapping, wordmark
+with "Nautical" in the accent colour. Sits top-left of the hub above the h1, 420px wide
+(300px below 560px viewport), framed with the site's border/radius/shadow.
+
+Two things that matter if it is ever regenerated:
+
+- **The logo's instruments are ROUND; the icons' are foreshortened to 86%.** The squash
+  reads as perspective inside a small app tile and as "skewed" at logo size. Do not reuse
+  the icon renders in the logo.
+- **No tagline in the on-page logo.** At 420px it renders about 4px tall. A version with
+  the tagline exists among the masters for large-format use only.
+
+The `<h1>` is still real text — the logo is an `<img>` with alt text above it, never the
+heading itself.
+
+Masters (full-resolution PNG, plus horizontal / stacked / mark-only variants with tagline)
+were produced outside this repo and are not tracked here. The script that draws the
+instruments also lives outside the repo — ask before assuming either is available.
+
+---
+
 ### App Store names (settled Sept 6, 2026)
 
 | App | Name (30 cap) | Subtitle (30 cap) |
