@@ -99,10 +99,10 @@ def masthead(cfg, prefix, here=None):
     return '''<header class="masthead">
   <div class="wrap">
     <a class="brand" href="%sindex.html">
-      <img class="brand-mark" src="%sassets/icons/%s-mark-60.webp" width="30" height="30" alt="" aria-hidden="true" decoding="async">
+      <img class="brand-logo" src="%sassets/brand-instruments.webp" width="73" height="38" alt="" aria-hidden="true" decoding="async">
       <span>
-        <span class="brand-name">%s</span>
-        <span class="brand-sub">by AeroNauticalTrax</span>
+        <span class="brand-name">Aero<span class="wm-a">Nautical</span>Trax</span>
+        <span class="brand-sub">%s</span>
       </span>
     </a>
     <nav class="mast-nav" aria-label="Primary">
@@ -110,7 +110,7 @@ def masthead(cfg, prefix, here=None):
       <span class="app-status app-status-dev">In development</span>
     </nav>
   </div>
-</header>''' % (prefix, prefix, cfg['icon'], cfg['display'], nav(cfg, prefix, here))
+</header>''' % (prefix, prefix, cfg['display'], nav(cfg, prefix, here))
 
 def devbanner(cfg, prefix):
     return '''  <div class="dev-banner">

@@ -152,6 +152,24 @@ next version, or revert the site — do not leave them apart for long.
 
 ### Brand logo (Sept 7, 2026)
 
+**The masthead carries the brand lockup on every page (Sept 7, 2026).** `assets/brand-instruments.webp`
+(the three instruments cropped out of `logo.webp` at 292x152, displayed 73x38) plus the wordmark
+as **live text**, not an image: `Aero<span class="wm-a">Nautical</span>Trax` in Archivo 800 with
+`.wm-a` in the accent colour. The product name sits underneath in `.brand-sub` — "AeroTrax",
+"NauticalTrax", "VehicleTrax", or empty on the hub and the shared pages.
+
+Why live text and not `logo.webp` itself: at 44px tall the full lockup's wordmark is about 6px
+of cap height and turns to mush, and the three instruments blur into one blob. It only becomes
+legible around 60px, which would mean a 92px sticky bar on every page. Live text is sharp at any
+size and density and costs no height. Do not swap it back for the image.
+
+The shared pages (404, privacy, support, terms) used to show "VehicleTrax" as the brand name — a
+leftover from the single-product site. They now show the brand with no product sub-line.
+
+Sizes step down twice: below 900px the mark is 50x26 and the wordmark 0.98rem; below 640px it is
+61x32 and 1rem. Without those steps the wider lockup pushes the nav onto a second row on tablets.
+
+
 `assets/logo.webp` — chart background, the three brass instruments overlapping, wordmark
 with "Nautical" in the accent colour. Sits top-left of the hub above the h1, 420px wide
 (300px below 560px viewport), framed with the site's border/radius/shadow.

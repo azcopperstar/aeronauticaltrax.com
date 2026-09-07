@@ -160,10 +160,10 @@ SHELL = """<!doctype html>
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="../index.html">
-      <img class="brand-mark" src="../assets/icons/vehicletrax-mark-60.webp" width="30" height="30" alt="" aria-hidden="true" decoding="async">
+      <img class="brand-logo" src="../assets/brand-instruments.webp" width="73" height="38" alt="" aria-hidden="true" decoding="async">
       <span>
-        <span class="brand-name">VehicleTrax</span>
-        <span class="brand-sub">by AeroNauticalTrax</span>
+        <span class="brand-name">Aero<span class="wm-a">Nautical</span>Trax</span>
+        <span class="brand-sub">VehicleTrax</span>
       </span>
     </a>
     <nav class="mast-nav" aria-label="Primary">
