@@ -152,16 +152,22 @@ next version, or revert the site — do not leave them apart for long.
 
 ### Brand logo (Sept 7, 2026)
 
-**The masthead carries the brand lockup on every page (Sept 7, 2026).** `assets/brand-instruments.webp`
-(the three instruments cropped out of `logo.webp` at 292x152, displayed 73x38) plus the wordmark
-as **live text**, not an image: `Aero<span class="wm-a">Nautical</span>Trax` in Archivo 800 with
-`.wm-a` in the accent colour. The product name sits underneath in `.brand-sub` — "AeroTrax",
-"NauticalTrax", "VehicleTrax", or empty on the hub and the shared pages.
+**The masthead carries the brand lockup on every page (Sept 7, 2026).** It is a dark "plate"
+(`.brand-plate`) that reproduces the logo: `assets/chart-tile.webp` — a clean patch of the chart
+ground taken from the right edge of `logo.webp` — as a tiled background under a 28% dark overlay,
+`assets/brand-instruments.webp` (the three instruments, 292x152, displayed 62x32), and the wordmark
+as **live text** in the logo's exact colours: cream `#F5EBDA` with "Nautical" in `#E4A663`. The
+product name sits under it in `.plate-sub` `#BCA588` — omitted entirely on the hub and shared pages.
 
-Why live text and not `logo.webp` itself: at 44px tall the full lockup's wordmark is about 6px
-of cap height and turns to mush, and the three instruments blur into one blob. It only becomes
-legible around 60px, which would mean a 92px sticky bar on every page. Live text is sharp at any
-size and density and costs no height. Do not swap it back for the image.
+Why live text rather than `logo.webp` itself: at 44px tall the real lockup's wordmark is about 6px
+of cap height and turns to mush, and the three instruments blur into one blob. It is only legible
+around 60px, which would mean a ~96px sticky bar on every page. Live text is sharp at any size and
+density and costs no height. Do not swap it back for the image.
+
+The plate is dark in both themes by design, so it reads as the logo on the light bar and as a warm
+brown against the cool dark bar. Contrast was checked against the *lightest* pixel of the chart
+tile: cream 9.6:1, sub-line 4.8:1 — both pass AA. If the tile or the overlay changes, re-check the
+sub-line; it has the least headroom.
 
 The shared pages (404, privacy, support, terms) used to show "VehicleTrax" as the brand name — a
 leftover from the single-product site. They now show the brand with no product sub-line.

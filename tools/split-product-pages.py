@@ -98,11 +98,11 @@ def nav(cfg, prefix, here):
 def masthead(cfg, prefix, here=None):
     return '''<header class="masthead">
   <div class="wrap">
-    <a class="brand" href="%sindex.html">
-      <img class="brand-logo" src="%sassets/brand-instruments.webp" width="73" height="38" alt="" aria-hidden="true" decoding="async">
+    <a class="brand-plate" href="%sindex.html">
+      <img class="plate-mark" src="%sassets/brand-instruments.webp" width="62" height="32" alt="" aria-hidden="true" decoding="async">
       <span>
-        <span class="brand-name">Aero<span class="wm-a">Nautical</span>Trax</span>
-        <span class="brand-sub">%s</span>
+        <span class="plate-wm">Aero<span class="wm-a">Nautical</span>Trax</span>
+        <span class="plate-sub">%s</span>
       </span>
     </a>
     <nav class="mast-nav" aria-label="Primary">
