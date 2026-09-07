@@ -328,10 +328,20 @@ that currently works fully offline, and VehicleTrax users are often out of signa
   - **`prefers-reduced-motion` disables both** the animation and the filter, leaving a
     crisp static flag. WCAG asks that motion running over five seconds be pausable; this is
     how that is satisfied. Do not remove that block.
-  - **Narrow screens get their own rule** (`max-width: 700px`). `preserveAspectRatio="slice"`
-    on a tall phone viewport zooms the flag until only a grey smudge is visible, so under
-    700px the svg switches to `aspect-ratio: 3 / 2; height: auto` and sits as a band across
-    the top, whole rather than cropped. Verified at 430x932.
+  - **Narrow screens get their own rule** (`max-width: 700px`), and it bit once — worth
+    understanding before touching it. `preserveAspectRatio="slice"` on a portrait viewport
+    zooms the flag until only a grey smudge shows, so under 700px the svg is *fitted*
+    instead (`aspect-ratio: 3 / 2; height: auto`). But a fitted flag has a bottom EDGE, and
+    the first attempt left the mask ~50% opaque where that edge fell — which rendered as a
+    hard-edged rectangular banner across the top of the page, not a backdrop. That is what
+    "big flag banner" means if it ever comes back. Two things prevent it now:
+      1. the flag is deliberately oversized (`width: 230%`), so its bottom edge sits at
+         68-86% of viewport height across every phone size;
+      2. the mask reaches fully transparent by ~44% of viewport height, well above it.
+    The narrow mask is **radial from the top-left**, not a linear top-to-bottom fade — a
+    linear fade leaves the canton's right edge showing as a blue block. Verified at
+    390x844, 430x932 and 513x888, light and dark. Change one of these numbers and re-check
+    the others.
   - **Content is lifted above it** by `body > header, body > main, body > footer { z-index: 1 }`
     in `style.css`. That rule is global and harmless on pages with no `.flagbg`.
   - **The masthead and the app cards stay opaque**, so the flag never sits under body text

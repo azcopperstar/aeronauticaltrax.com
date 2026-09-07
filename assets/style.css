@@ -612,13 +612,24 @@
   0%, 100% { transform: translate3d(0, 0, 0)    rotate(-.45deg) scale(1.03); }
   50%      { transform: translate3d(0, -.7%, 0) rotate(.45deg)  scale(1.03); }
 }
-/* narrow screens: fit the whole flag as a band across the top,
-   otherwise 'slice' zooms it into an unreadable smear */
+/* Narrow screens. 'slice' on a portrait viewport zooms the flag into an
+   unreadable smear, so here it is sized to fit instead (aspect-ratio + auto
+   height). The catch: a fitted flag has a bottom EDGE, and if the mask is
+   still even slightly opaque where that edge falls, it reads as a rectangular
+   banner rather than a backdrop. So the flag is deliberately oversized (230%)
+   and the fade is finished by ~44% of the viewport height (74% of the mask's
+   60% vertical extent) — well above that edge at every phone size. The mask is
+   radial from the top-left so the canton's right edge fades out too; a linear
+   top-to-bottom fade leaves that edge visible as a block. If you change one of
+   these numbers, re-check the others. */
 @media (max-width: 700px) {
-  .flagbg svg { top: -4%; left: -10%; width: 132%; height: auto; aspect-ratio: 3 / 2; }
+  .flagbg svg {
+    top: -3%; left: -8%;
+    width: 230%; height: auto; aspect-ratio: 3 / 2;
+  }
   .flagbg {
-    -webkit-mask-image: radial-gradient(150% 78% at 22% 0%, #000 0%, rgba(0,0,0,.5) 45%, transparent 82%);
-            mask-image: radial-gradient(150% 78% at 22% 0%, #000 0%, rgba(0,0,0,.5) 45%, transparent 82%);
+    -webkit-mask-image: radial-gradient(125% 60% at 14% 0%, #000 0%, rgba(0,0,0,.42) 38%, transparent 74%);
+            mask-image: radial-gradient(125% 60% at 14% 0%, #000 0%, rgba(0,0,0,.42) 38%, transparent 74%);
   }
 }
 /* keep every page's content above the backdrop */
