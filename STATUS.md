@@ -308,6 +308,37 @@ that currently works fully offline, and VehicleTrax users are often out of signa
 
 ## Decisions already made (don't relitigate without reason)
 
+- **Waving flag backdrop on the hub only** (added Sept 7, 2026). `index.html` carries a
+  `.flagbg` div right after `<body>`: an inline SVG US flag, fixed to the viewport, behind
+  everything. It is decorative (`aria-hidden`), so it stays out of the accessibility tree.
+  How it is built and why each number is what it is:
+  - **Opacity `.085`** on `.flagbg`. Five intensities were rendered side by side before
+    picking this one. Anything at or above `.10` puts the canton's hard vertical edge
+    through the "Everything on record." headline; below `.06` it stops reading as a flag.
+    This is the single knob — change the opacity, nothing else, to tune it.
+  - **The canton is pushed to the top-left corner** (`svg` at `168%`, offset `-22% / -26%`)
+    with a radial mask fading from `8% 0%`. That keeps the hard blue rectangle out of the
+    headline's way and puts the stripes, which are much quieter, across the body copy.
+  - **Two animations.** A CSS `flag-sway` transform (12s, cheap — GPU compositing) and an
+    SVG `feTurbulence` + `feDisplacementMap` ripple whose `baseFrequency` animates over 12s.
+    Both periods match so the loop is seamless. **The turbulence is the expensive one** — it
+    recomputes noise every frame across the whole viewport. If battery on a laptop ever
+    becomes a complaint, drop the `<animate>` inside `feTurbulence` and keep the sway; that
+    loses very little and costs nearly nothing.
+  - **`prefers-reduced-motion` disables both** the animation and the filter, leaving a
+    crisp static flag. WCAG asks that motion running over five seconds be pausable; this is
+    how that is satisfied. Do not remove that block.
+  - **Narrow screens get their own rule** (`max-width: 700px`). `preserveAspectRatio="slice"`
+    on a tall phone viewport zooms the flag until only a grey smudge is visible, so under
+    700px the svg switches to `aspect-ratio: 3 / 2; height: auto` and sits as a band across
+    the top, whole rather than cropped. Verified at 430x932.
+  - **Content is lifted above it** by `body > header, body > main, body > footer { z-index: 1 }`
+    in `style.css`. That rule is global and harmless on pages with no `.flagbg`.
+  - **The masthead and the app cards stay opaque**, so the flag never sits under body text
+    inside a card — it only shows through the page ground.
+  - If it is ever wanted on the product pages too, copy the `.flagbg` div into them; the CSS
+    already lives in the shared stylesheet.
+
 - **The domain is the VehicleTrax site.** "AeroNauticalTrax" is the maker name in the
   footer. The old aviation tagline is gone. Revisit only if an aviation product appears.
 - **No hero screenshot.** The right side of the hero is a hand-built maintenance panel

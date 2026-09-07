@@ -593,3 +593,37 @@
   border: 1px solid var(--line-strong);
   border-radius: 2px;
 }
+
+/* ---------- waving flag backdrop (hub page only) ---------- */
+.flagbg {
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none; overflow: hidden;
+  opacity: .085;
+  -webkit-mask-image: radial-gradient(115% 105% at 8% 0%, #000 0%, rgba(0,0,0,.5) 42%, transparent 78%);
+          mask-image: radial-gradient(115% 105% at 8% 0%, #000 0%, rgba(0,0,0,.5) 42%, transparent 78%);
+}
+.flagbg svg { position: absolute; top: -22%; left: -26%; width: 168%; height: 168%; }
+.flagbg .cloth {
+  filter: url(#flag-ripple);
+  transform-origin: 50% 50%;
+  animation: flag-sway 12s ease-in-out infinite;
+}
+@keyframes flag-sway {
+  0%, 100% { transform: translate3d(0, 0, 0)    rotate(-.45deg) scale(1.03); }
+  50%      { transform: translate3d(0, -.7%, 0) rotate(.45deg)  scale(1.03); }
+}
+/* narrow screens: fit the whole flag as a band across the top,
+   otherwise 'slice' zooms it into an unreadable smear */
+@media (max-width: 700px) {
+  .flagbg svg { top: -4%; left: -10%; width: 132%; height: auto; aspect-ratio: 3 / 2; }
+  .flagbg {
+    -webkit-mask-image: radial-gradient(150% 78% at 22% 0%, #000 0%, rgba(0,0,0,.5) 45%, transparent 82%);
+            mask-image: radial-gradient(150% 78% at 22% 0%, #000 0%, rgba(0,0,0,.5) 45%, transparent 82%);
+  }
+}
+/* keep every page's content above the backdrop */
+body > header, body > main, body > footer { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .flagbg .cloth { animation: none; filter: none; }
+  .flagbg animate { display: none; }
+}
